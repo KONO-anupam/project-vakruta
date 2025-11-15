@@ -299,7 +299,7 @@ export default function Index() {
       </section>
 
       {/* Gradient Section at Bottom */}
-      <section className="relative min-h-96 md:min-h-screen overflow-hidden bg-gradient-to-b from-white via-blue-50 to-blue-100 border-t border-blue-100 flex items-center">
+      <section className="relative min-h-96 md:min-h-screen overflow-hidden bg-gradient-to-b from-white via-blue-50 to-blue-100 flex items-center">
         <div className="absolute inset-0">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F7bd6f9d19eb849b583b1cfc21fd88993?format=webp&width=1400"
@@ -315,7 +315,7 @@ export default function Index() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-200/30 to-transparent rounded-full blur-3xl -ml-48 -mt-48"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-amber-200/20 to-transparent rounded-full blur-3xl -mr-48 -mb-48"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center w-full">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-28 text-center w-full">
           <h2 className="font-display text-4xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight">
             Join the Vakruta Movement
           </h2>
