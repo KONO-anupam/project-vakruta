@@ -19,7 +19,7 @@ html {
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 40 45% 94%;
+    --background: 0 0% 100%;
     --foreground: 210 20% 20%;
 
     --card: 0 0% 100%;
@@ -29,12 +29,12 @@ html {
     --popover-foreground: 210 20% 20%;
 
     --primary: 210 60% 35%;
-    --primary-foreground: 40 45% 94%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 45% 88%;
+    --secondary: 210 30% 90%;
     --secondary-foreground: 210 60% 35%;
 
-    --muted: 40 20% 75%;
+    --muted: 210 20% 80%;
     --muted-foreground: 210 15% 40%;
 
     --accent: 40 85% 55%;
@@ -43,25 +43,25 @@ html {
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 30% 85%;
-    --input: 40 30% 90%;
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
     --ring: 210 60% 35%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 40 45% 94%;
+    --sidebar-background: 0 0% 100%;
 
     --sidebar-foreground: 210 20% 20%;
 
     --sidebar-primary: 210 60% 35%;
 
-    --sidebar-primary-foreground: 40 45% 94%;
+    --sidebar-primary-foreground: 0 0% 100%;
 
     --sidebar-accent: 40 85% 55%;
 
     --sidebar-accent-foreground: 210 20% 20%;
 
-    --sidebar-border: 40 30% 85%;
+    --sidebar-border: 210 20% 90%;
 
     --sidebar-ring: 40 85% 55%;
   }
