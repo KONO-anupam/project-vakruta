@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-auto h-5  overflow-hidden bg-white p-1 shadow-md hover:shadow-lg transition-shadow">
+            <div className="w-auto h-8  overflow-hidden bg-white p-1 shadow-md hover:shadow-lg transition-shadow">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F2b1a5895495e4fb98781781147a0dfc0?format=webp&width=200"
                 alt="Vakruta"
