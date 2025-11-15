@@ -1,4 +1,9 @@
 export default function Footer() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-white mt-20 relative">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
@@ -23,19 +28,28 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="#hero" className="text-blue-100 hover:text-amber-400 transition-colors font-cinzel">
+                <button
+                  onClick={() => scrollToSection("hero")}
+                  className="text-blue-100 hover:text-amber-400 transition-colors font-cinzel cursor-pointer bg-none border-none p-0"
+                >
                   Home
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#about" className="text-blue-100 hover:text-amber-400 transition-colors font-cinzel">
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="text-blue-100 hover:text-amber-400 transition-colors font-cinzel cursor-pointer bg-none border-none p-0"
+                >
                   About Us
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#statistics" className="text-blue-100 hover:text-amber-400 transition-colors font-cinzel">
+                <button
+                  onClick={() => scrollToSection("statistics")}
+                  className="text-blue-100 hover:text-amber-400 transition-colors font-cinzel cursor-pointer bg-none border-none p-0"
+                >
                   Statistics
-                </a>
+                </button>
               </li>
             </ul>
           </div>
