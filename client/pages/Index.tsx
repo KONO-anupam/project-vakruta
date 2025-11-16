@@ -253,7 +253,7 @@ export default function Index() {
             >
               About Vakruta
             </h2>
-            <div className="w-full h-1/4 bg-gradient-to-r from-transparent via-[#f5c422] to-transparent mx-auto"></div>
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#f5c422] to-transparent mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
