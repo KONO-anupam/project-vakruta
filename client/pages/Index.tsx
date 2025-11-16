@@ -14,7 +14,7 @@ const GridBackground = ({ children, className = "" }: { children?: React.ReactNo
         className="absolute inset-0 opacity-30"
         style={{
           backgroundSize: '40px 40px',
-          backgroundImage: 'linear-gradient(to right, #e8dcc8 1px, transparent 1px), linear-gradient(to bottom, #e8dcc8 1px, transparent 1px)'
+          backgroundImage: 'linear-gradient(to right, #15122e 1px, transparent 1px), linear-gradient(to bottom, #15122e 1px, transparent 1px)'
         }}
       />
       <div className="pointer-events-none absolute inset-0 bg-[#f3e8dc] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
