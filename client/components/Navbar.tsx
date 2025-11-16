@@ -27,12 +27,7 @@ export default function Navbar() {
                 />
               </div>
             </div>
-            <div className="hidden lg:block">
-              <p className="font-display text-2xl font-black text-[#f5c422]">VAKRUTA</p>
-              <p className="font-cinzel text-[10px] uppercase tracking-[0.2em] text-[#388697]">
-                NIT Rourkela
-              </p>
-            </div>
+            
           </Link>
 
           {/* Desktop Nav Links */}
