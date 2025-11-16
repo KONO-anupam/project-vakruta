@@ -1,28 +1,10 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Mock components - replace with your actual components
-const Navbar = () => (
-  <nav className="bg-[#f3e8dc] border-b border-[#e8dcc8] sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div className="flex justify-between items-center">
-        <span className="font-display text-2xl font-bold text-[#f5c422]">Vakruta</span>
-        <div className="flex gap-6 font-cinzel text-[#15122e]">
-          <a href="#hero" className="hover:text-[#f5c422] transition-colors">Home</a>
-          <a href="#about" className="hover:text-[#f5c422] transition-colors">About</a>
-          <a href="#brochure" className="hover:text-[#f5c422] transition-colors">Brochure</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-);
-
-const Footer = () => (
-  <footer className="bg-[#15122e] text-white py-12">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p className="font-cinzel">© 2025 Vakruta. All rights reserved.</p>
-    </div>
-  </footer>
-);
+gsap.registerPlugin(ScrollTrigger);
 
 // Grid Background Component
 const GridBackground = ({ children, className = "" }: { children?: React.ReactNode; className?: string }) => {
