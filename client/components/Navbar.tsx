@@ -40,7 +40,7 @@ export default function Navbar() {
                   <circle cx="20" cy="4" r="1.5" fill="currentColor" />
                 </svg>
               </div>
-
+              
               <div className="absolute inset-0 bg-[#f5c422] transform -rotate-3 group-hover:rotate-0 transition-transform duration-300"></div>
               <div className="relative w-auto h-12 bg-white p-2 border-2 border-[#388697]">
                 <img
@@ -130,10 +130,10 @@ export default function Navbar() {
             <button className="relative group overflow-hidden">
               {/* Outer Islamic border */}
               <div className="absolute -inset-1 border-2 border-[#388697] opacity-50"></div>
-
+              
               {/* Animated background */}
               <div className="absolute inset-0 bg-[#388697] transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-
+              
               {/* Main button */}
               <div className="relative bg-[#f5c422] text-[#15122e] font-display font-black text-sm uppercase tracking-wider px-6 py-3 border-2 border-[#f5c422] group-hover:border-[#388697] flex items-center gap-2">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -167,8 +167,8 @@ export default function Navbar() {
       {/* Decorative Bottom Strip - Islamic Zellige Pattern */}
       <div className="h-1 w-full flex">
         {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
+          <div 
+            key={i} 
             className={`flex-1 ${i % 3 === 0 ? 'bg-[#388697]' : i % 3 === 1 ? 'bg-[#f5c422]' : 'bg-[#15122e]'} opacity-80`}
           ></div>
         ))}
