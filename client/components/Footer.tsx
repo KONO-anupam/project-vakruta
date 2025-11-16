@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="border-t-2 border-[#388697] pt-8">
           <div className="text-center">
             <p className="text-[#8EC4D9] font-cinzel text-sm">
-              © 2024 Vakruta. All rights reserved.
+              © 2025 Vakruta. All rights reserved.
             </p>
             <p className="text-[#8EC4D9] font-cinzel text-xs mt-2">
               Inspired by the legacy of Mughal Empire
