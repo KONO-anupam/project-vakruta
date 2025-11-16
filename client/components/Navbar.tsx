@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <button className="relative group overflow-hidden">
               <div className="absolute inset-0 bg-[#388697] transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-              <div className="relative bg-[#f5c422] text-[#15122e] font-display font-black text-md uppercase tracking-wider px-6 py-3 border-2 border-[#f5c422] group-hover:border-[#388697]">
+              <div className="relative bg-[#f5c422] text-[#15122e] font-display font-black text- uppercase tracking-wider px-6 py-3 border-2 border-[#f5c422] group-hover:border-[#388697]">
                 Register →
               </div>
             </button>
