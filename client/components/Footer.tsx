@@ -64,39 +64,27 @@ export default function Footer() {
               Join us in celebrating the spirit of Vakruta
             </p>
             <div className="mt-4 flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 bg-[#f5c422] hover:bg-[#d4a913] rounded-full flex items-center justify-center transition-colors"
-              >
-                <span className="text-[#15122e] font-bold">f</span>
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-[#f5c422] hover:bg-[#d4a913] rounded-full flex items-center justify-center transition-colors"
-              >
-                <span className="text-[#15122e] font-bold">𝕏</span>
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-[#f5c422] hover:bg-[#d4a913] rounded-full flex items-center justify-center transition-colors"
-              >
-                <span className="text-[#15122e] font-bold">in</span>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div className="border-t-2 border-[#388697] pt-8">
-          <div className="text-center">
-            <p className="text-[#8EC4D9] font-cinzel text-sm">
-              © 2024 Vakruta. All rights reserved.
-            </p>
-            <p className="text-[#8EC4D9] font-cinzel text-xs mt-2">
-              Inspired by the legacy of Mughal Empire
-            </p>
+              href="#"
+              className="w-10 h-10 bg-[#f5c422] hover:bg-[#d4a913] rounded-full flex items-center justify-center transition-colors"
+              >
+              <span className="text-[#15122e] font-bold">IG</span>
+            </a>
           </div>
         </div>
       </div>
-    </footer>
+
+      <div className="border-t-2 border-[#388697] pt-8">
+        <div className="text-center">
+          <p className="text-[#8EC4D9] font-cinzel text-sm">
+            © 2024 Vakruta. All rights reserved.
+          </p>
+          <p className="text-[#8EC4D9] font-cinzel text-xs mt-2">
+            Inspired by the legacy of Mughal Empire
+          </p>
+        </div>
+      </div>
+    </div>
+    </footer >
   );
 }
