@@ -21,20 +21,53 @@ const IslamicPattern = ({
             radial-gradient(circle at 0% 0%, rgba(56, 134, 151, 0.4) 1px, transparent 1px),
             radial-gradient(circle at 100% 100%, rgba(245, 196, 34, 0.4) 1px, transparent 1px)
           `,
-          backgroundSize: '40px 40px, 60px 60px, 50px 50px',
-          backgroundPosition: '0 0, 20px 20px, 10px 10px'
+          backgroundSize: "40px 40px, 60px 60px, 50px 50px",
+          backgroundPosition: "0 0, 20px 20px, 10px 10px",
         }}
       />
       {/* Interlocking circles (common in Islamic art) */}
       <div className="absolute inset-0 opacity-5">
         <svg className="w-full h-full">
           <defs>
-            <pattern id="islamic-circles" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-              <circle cx="40" cy="40" r="30" fill="none" stroke="#388697" strokeWidth="1.5" />
-              <circle cx="40" cy="40" r="20" fill="none" stroke="#f5c422" strokeWidth="1" />
-              <circle cx="40" cy="40" r="10" fill="none" stroke="#388697" strokeWidth="0.5" />
-              <path d="M 40,10 L 45,30 L 65,30 L 50,42 L 55,62 L 40,50 L 25,62 L 30,42 L 15,30 L 35,30 Z"
-                fill="none" stroke="#f5c422" strokeWidth="0.8" opacity="0.6" />
+            <pattern
+              id="islamic-circles"
+              x="0"
+              y="0"
+              width="80"
+              height="80"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle
+                cx="40"
+                cy="40"
+                r="30"
+                fill="none"
+                stroke="#388697"
+                strokeWidth="1.5"
+              />
+              <circle
+                cx="40"
+                cy="40"
+                r="20"
+                fill="none"
+                stroke="#f5c422"
+                strokeWidth="1"
+              />
+              <circle
+                cx="40"
+                cy="40"
+                r="10"
+                fill="none"
+                stroke="#388697"
+                strokeWidth="0.5"
+              />
+              <path
+                d="M 40,10 L 45,30 L 65,30 L 50,42 L 55,62 L 40,50 L 25,62 L 30,42 L 15,30 L 35,30 Z"
+                fill="none"
+                stroke="#f5c422"
+                strokeWidth="0.8"
+                opacity="0.6"
+              />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#islamic-circles)" />
@@ -68,18 +101,54 @@ export default function Index() {
         <div className="absolute inset-0 opacity-8">
           <svg className="w-full h-full" preserveAspectRatio="xMidYMid slice">
             <defs>
-              <pattern id="zellige-tile" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+              <pattern
+                id="zellige-tile"
+                x="0"
+                y="0"
+                width="120"
+                height="120"
+                patternUnits="userSpaceOnUse"
+              >
                 {/* Central 8-point star */}
-                <path d="M 60,20 L 65,35 L 80,35 L 67,45 L 72,60 L 60,50 L 48,60 L 53,45 L 40,35 L 55,35 Z"
-                  fill="#f5c422" opacity="0.15" />
+                <path
+                  d="M 60,20 L 65,35 L 80,35 L 67,45 L 72,60 L 60,50 L 48,60 L 53,45 L 40,35 L 55,35 Z"
+                  fill="#f5c422"
+                  opacity="0.15"
+                />
                 {/* Interlocking geometric pattern */}
-                <path d="M 60,0 L 80,20 L 100,20 L 120,40 L 120,60 L 100,80 L 80,80 L 60,100 L 40,80 L 20,80 L 0,60 L 0,40 L 20,20 L 40,20 Z"
-                  fill="none" stroke="#388697" strokeWidth="1" opacity="0.2" />
-                <circle cx="60" cy="60" r="25" fill="none" stroke="#f5c422" strokeWidth="1.5" opacity="0.1" />
-                <circle cx="60" cy="60" r="15" fill="none" stroke="#388697" strokeWidth="1" opacity="0.15" />
+                <path
+                  d="M 60,0 L 80,20 L 100,20 L 120,40 L 120,60 L 100,80 L 80,80 L 60,100 L 40,80 L 20,80 L 0,60 L 0,40 L 20,20 L 40,20 Z"
+                  fill="none"
+                  stroke="#388697"
+                  strokeWidth="1"
+                  opacity="0.2"
+                />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="25"
+                  fill="none"
+                  stroke="#f5c422"
+                  strokeWidth="1.5"
+                  opacity="0.1"
+                />
+                <circle
+                  cx="60"
+                  cy="60"
+                  r="15"
+                  fill="none"
+                  stroke="#388697"
+                  strokeWidth="1"
+                  opacity="0.15"
+                />
                 {/* Kufic-inspired angular lines */}
-                <path d="M 30,30 L 45,30 L 45,45 L 60,45 L 60,30 L 75,30 L 75,45 L 90,45 L 90,60 L 75,60 L 75,75 L 60,75 L 60,90 L 45,90 L 45,75 L 30,75 L 30,60 L 45,60 L 45,45 L 30,45 Z"
-                  fill="none" stroke="#388697" strokeWidth="0.8" opacity="0.12" />
+                <path
+                  d="M 30,30 L 45,30 L 45,45 L 60,45 L 60,30 L 75,30 L 75,45 L 90,45 L 90,60 L 75,60 L 75,75 L 60,75 L 60,90 L 45,90 L 45,75 L 30,75 L 30,60 L 45,60 L 45,45 L 30,45 Z"
+                  fill="none"
+                  stroke="#388697"
+                  strokeWidth="0.8"
+                  opacity="0.12"
+                />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#zellige-tile)" />
@@ -90,11 +159,42 @@ export default function Index() {
         <div className="absolute inset-0 opacity-6">
           <svg className="w-full h-full">
             <defs>
-              <pattern id="muqarnas" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                <polygon points="50,10 60,30 50,50 40,30" fill="none" stroke="#388697" strokeWidth="1.2" opacity="0.4" />
-                <polygon points="50,50 60,70 50,90 40,70" fill="none" stroke="#f5c422" strokeWidth="1" opacity="0.3" />
-                <polygon points="10,30 30,30 30,50 10,50" fill="none" stroke="#388697" strokeWidth="0.8" opacity="0.3" />
-                <polygon points="70,30 90,30 90,50 70,50" fill="none" stroke="#f5c422" strokeWidth="0.8" opacity="0.3" />
+              <pattern
+                id="muqarnas"
+                x="0"
+                y="0"
+                width="100"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <polygon
+                  points="50,10 60,30 50,50 40,30"
+                  fill="none"
+                  stroke="#388697"
+                  strokeWidth="1.2"
+                  opacity="0.4"
+                />
+                <polygon
+                  points="50,50 60,70 50,90 40,70"
+                  fill="none"
+                  stroke="#f5c422"
+                  strokeWidth="1"
+                  opacity="0.3"
+                />
+                <polygon
+                  points="10,30 30,30 30,50 10,50"
+                  fill="none"
+                  stroke="#388697"
+                  strokeWidth="0.8"
+                  opacity="0.3"
+                />
+                <polygon
+                  points="70,30 90,30 90,50 70,50"
+                  fill="none"
+                  stroke="#f5c422"
+                  strokeWidth="0.8"
+                  opacity="0.3"
+                />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#muqarnas)" />
@@ -110,42 +210,102 @@ export default function Index() {
                 {/* Mashrabiya-inspired geometric corners */}
                 <div className="absolute -top-6 -left-6 w-16 h-16">
                   <svg viewBox="0 0 64 64" className="w-full h-full">
-                    <path d="M 0,0 L 0,32 Q 0,0 32,0 Z" fill="none" stroke="#f5c422" strokeWidth="3" />
-                    <path d="M 4,4 L 4,28 Q 4,4 28,4" fill="none" stroke="#f5c422" strokeWidth="1.5" />
+                    <path
+                      d="M 0,0 L 0,32 Q 0,0 32,0 Z"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="3"
+                    />
+                    <path
+                      d="M 4,4 L 4,28 Q 4,4 28,4"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="1.5"
+                    />
                     <circle cx="8" cy="8" r="2" fill="#f5c422" />
                     <circle cx="16" cy="8" r="1.5" fill="#f5c422" />
                     <circle cx="8" cy="16" r="1.5" fill="#f5c422" />
-                    <path d="M 0,16 L 16,0 M 0,32 L 32,0" stroke="#388697" strokeWidth="0.5" opacity="0.5" />
+                    <path
+                      d="M 0,16 L 16,0 M 0,32 L 32,0"
+                      stroke="#388697"
+                      strokeWidth="0.5"
+                      opacity="0.5"
+                    />
                   </svg>
                 </div>
                 <div className="absolute -top-6 -right-6 w-16 h-16">
                   <svg viewBox="0 0 64 64" className="w-full h-full">
-                    <path d="M 64,0 L 64,32 Q 64,0 32,0 Z" fill="none" stroke="#388697" strokeWidth="3" />
-                    <path d="M 60,4 L 60,28 Q 60,4 36,4" fill="none" stroke="#388697" strokeWidth="1.5" />
+                    <path
+                      d="M 64,0 L 64,32 Q 64,0 32,0 Z"
+                      fill="none"
+                      stroke="#388697"
+                      strokeWidth="3"
+                    />
+                    <path
+                      d="M 60,4 L 60,28 Q 60,4 36,4"
+                      fill="none"
+                      stroke="#388697"
+                      strokeWidth="1.5"
+                    />
                     <circle cx="56" cy="8" r="2" fill="#388697" />
                     <circle cx="48" cy="8" r="1.5" fill="#388697" />
                     <circle cx="56" cy="16" r="1.5" fill="#388697" />
-                    <path d="M 64,16 L 48,0 M 64,32 L 32,0" stroke="#f5c422" strokeWidth="0.5" opacity="0.5" />
+                    <path
+                      d="M 64,16 L 48,0 M 64,32 L 32,0"
+                      stroke="#f5c422"
+                      strokeWidth="0.5"
+                      opacity="0.5"
+                    />
                   </svg>
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-16 h-16">
                   <svg viewBox="0 0 64 64" className="w-full h-full">
-                    <path d="M 0,64 L 0,32 Q 0,64 32,64 Z" fill="none" stroke="#388697" strokeWidth="3" />
-                    <path d="M 4,60 L 4,36 Q 4,60 28,60" fill="none" stroke="#388697" strokeWidth="1.5" />
+                    <path
+                      d="M 0,64 L 0,32 Q 0,64 32,64 Z"
+                      fill="none"
+                      stroke="#388697"
+                      strokeWidth="3"
+                    />
+                    <path
+                      d="M 4,60 L 4,36 Q 4,60 28,60"
+                      fill="none"
+                      stroke="#388697"
+                      strokeWidth="1.5"
+                    />
                     <circle cx="8" cy="56" r="2" fill="#388697" />
                     <circle cx="16" cy="56" r="1.5" fill="#388697" />
                     <circle cx="8" cy="48" r="1.5" fill="#388697" />
-                    <path d="M 0,48 L 16,64 M 0,32 L 32,64" stroke="#f5c422" strokeWidth="0.5" opacity="0.5" />
+                    <path
+                      d="M 0,48 L 16,64 M 0,32 L 32,64"
+                      stroke="#f5c422"
+                      strokeWidth="0.5"
+                      opacity="0.5"
+                    />
                   </svg>
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-16 h-16">
                   <svg viewBox="0 0 64 64" className="w-full h-full">
-                    <path d="M 64,64 L 64,32 Q 64,64 32,64 Z" fill="none" stroke="#f5c422" strokeWidth="3" />
-                    <path d="M 60,60 L 60,36 Q 60,60 36,60" fill="none" stroke="#f5c422" strokeWidth="1.5" />
+                    <path
+                      d="M 64,64 L 64,32 Q 64,64 32,64 Z"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="3"
+                    />
+                    <path
+                      d="M 60,60 L 60,36 Q 60,60 36,60"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="1.5"
+                    />
                     <circle cx="56" cy="56" r="2" fill="#f5c422" />
                     <circle cx="48" cy="56" r="1.5" fill="#f5c422" />
                     <circle cx="56" cy="48" r="1.5" fill="#f5c422" />
-                    <path d="M 64,48 L 48,64 M 64,32 L 32,64" stroke="#388697" strokeWidth="0.5" opacity="0.5" />
+                    <path
+                      d="M 64,48 L 48,64 M 64,32 L 32,64"
+                      stroke="#388697"
+                      strokeWidth="0.5"
+                      opacity="0.5"
+                    />
                   </svg>
                 </div>
 
@@ -153,16 +313,32 @@ export default function Index() {
                   {/* Inner geometric pattern */}
                   <div className="absolute inset-0 opacity-5">
                     <svg className="w-full h-full">
-                      <pattern id="inner-lattice" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <path d="M 10,0 L 20,10 L 10,20 L 0,10 Z" fill="none" stroke="#388697" strokeWidth="0.5" />
+                      <pattern
+                        id="inner-lattice"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                        patternUnits="userSpaceOnUse"
+                      >
+                        <path
+                          d="M 10,0 L 20,10 L 10,20 L 0,10 Z"
+                          fill="none"
+                          stroke="#388697"
+                          strokeWidth="0.5"
+                        />
                       </pattern>
-                      <rect width="100%" height="100%" fill="url(#inner-lattice)" />
+                      <rect
+                        width="100%"
+                        height="100%"
+                        fill="url(#inner-lattice)"
+                      />
                     </svg>
                   </div>
                   <h1
                     ref={heroHeadingRef}
                     className="font-display text-6xl md:text-7xl lg:text-8xl font-black text-[#15122e] leading-[0.9] relative"
-                    style={{ letterSpacing: '0.08em' }}
+                    style={{ letterSpacing: "0.08em" }}
                   >
                     VAK<span className="text-[#f5c422]">RU</span>TA
                   </h1>
@@ -173,7 +349,8 @@ export default function Index() {
                 ref={heroParagraphRef}
                 className="font-cinzel text-lg md:text-xl text-[#15122e] leading-relaxed italic mb-8"
               >
-                Where articulation meets intellect in the grand tradition of India's royal courts
+                Where articulation meets intellect in the grand tradition of
+                India's royal courts
               </p>
 
               {/* Islamic Geometric Badge */}
@@ -181,7 +358,9 @@ export default function Index() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-[#f5c422] transform rotate-45"></div>
                   <div className="relative bg-[#15122e] m-1 px-6 py-3 border-2 border-[#f5c422]">
-                    <p className="font-display text-2xl font-black text-[#f5c422]">2025</p>
+                    <p className="font-display text-2xl font-black text-[#f5c422]">
+                      2026
+                    </p>
                   </div>
                 </div>
               </div>
@@ -190,14 +369,24 @@ export default function Index() {
               <div className="flex justify-center md:justify-start">
                 <button className="relative group">
                   <div className="absolute inset-0 bg-[#f5c422] transform group-hover:scale-105 transition-transform duration-300"></div>
-                  <div className="relative bg-[#15122e] m-1 px-10 py-4 font-cinzel font-bold text-xl text-[#f5c422] uppercase tracking-[0.2em] group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300">
+                  <div className="relative bg-[#15122e] m-1 px-10 py-4 font-cinzel font-bold text-[23px] text-[#f5c422] uppercase tracking-[0.2em] group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300">
                     <span className="inline-flex items-center gap-3">
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="currentColor"
+                      >
                         <path d="M 9,2 Q 5,2 5,9 Q 5,16 9,16 Q 7,16 7,9 Q 7,2 9,2 Z" />
                         <circle cx="13" cy="5" r="1.5" />
                       </svg>
                       Sponsor Us
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="currentColor"
+                      >
                         <path d="M 9,2 Q 13,2 13,9 Q 13,16 9,16 Q 11,16 11,9 Q 11,2 9,2 Z" />
                         <circle cx="5" cy="5" r="1.5" />
                       </svg>
@@ -208,42 +397,79 @@ export default function Index() {
             </div>
 
             {/* Right: Ornate Islamic Arch Frame Image */}
-            <div
-              ref={heroImageRef}
-              className="relative"
-            >
+            <div ref={heroImageRef} className="relative">
               <div className="relative">
                 {/* Multi-layered Islamic Border with Arabesque */}
                 <div className="absolute -inset-6 border-4 border-[#f5c422] opacity-30"></div>
                 <div className="absolute -inset-4 border-2 border-[#388697]"></div>
                 <div className="absolute -inset-3">
                   <svg className="w-full h-full" preserveAspectRatio="none">
-                    <rect width="100%" height="100%" fill="none" stroke="#f5c422" strokeWidth="1" opacity="0.5" strokeDasharray="4,4" />
+                    <rect
+                      width="100%"
+                      height="100%"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="1"
+                      opacity="0.5"
+                      strokeDasharray="4,4"
+                    />
                   </svg>
                 </div>
 
                 {/* Crescent Moon Corner ornaments */}
                 <div className="absolute -top-3 -left-3 z-10">
-                  <svg width="36" height="36" viewBox="0 0 36 36" className="text-[#f5c422]">
-                    <path d="M 18,4 Q 10,4 10,18 Q 10,32 18,32 Q 13,32 13,18 Q 13,4 18,4 Z" fill="currentColor" />
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    className="text-[#f5c422]"
+                  >
+                    <path
+                      d="M 18,4 Q 10,4 10,18 Q 10,32 18,32 Q 13,32 13,18 Q 13,4 18,4 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="26" cy="10" r="3" fill="currentColor" />
                   </svg>
                 </div>
                 <div className="absolute -top-3 -right-3 z-10">
-                  <svg width="36" height="36" viewBox="0 0 36 36" className="text-[#388697]">
-                    <path d="M 18,4 Q 26,4 26,18 Q 26,32 18,32 Q 23,32 23,18 Q 23,4 18,4 Z" fill="currentColor" />
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    className="text-[#388697]"
+                  >
+                    <path
+                      d="M 18,4 Q 26,4 26,18 Q 26,32 18,32 Q 23,32 23,18 Q 23,4 18,4 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="10" cy="10" r="3" fill="currentColor" />
                   </svg>
                 </div>
                 <div className="absolute -bottom-3 -left-3 z-10">
-                  <svg width="36" height="36" viewBox="0 0 36 36" className="text-[#388697]">
-                    <path d="M 18,4 Q 10,4 10,18 Q 10,32 18,32 Q 13,32 13,18 Q 13,4 18,4 Z" fill="currentColor" />
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    className="text-[#388697]"
+                  >
+                    <path
+                      d="M 18,4 Q 10,4 10,18 Q 10,32 18,32 Q 13,32 13,18 Q 13,4 18,4 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="26" cy="26" r="3" fill="currentColor" />
                   </svg>
                 </div>
                 <div className="absolute -bottom-3 -right-3 z-10">
-                  <svg width="36" height="36" viewBox="0 0 36 36" className="text-[#f5c422]">
-                    <path d="M 18,4 Q 26,4 26,18 Q 26,32 18,32 Q 23,32 23,18 Q 23,4 18,4 Z" fill="currentColor" />
+                  <svg
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    className="text-[#f5c422]"
+                  >
+                    <path
+                      d="M 18,4 Q 26,4 26,18 Q 26,32 18,32 Q 23,32 23,18 Q 23,4 18,4 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="10" cy="26" r="3" fill="currentColor" />
                   </svg>
                 </div>
@@ -257,11 +483,24 @@ export default function Index() {
                       className="w-full h-64 md:h-80 object-cover"
                     />
                     {/* Horseshoe arch overlay */}
-                    <svg className="absolute top-0 left-0 w-full h-full pointer-events-none" preserveAspectRatio="none">
-                      <path d="M 0,100% L 0,35% Q 0,15% 15%,8% Q 25%,5% 35%,5% L 45%,5% Q 50%,3% 50%,0 Q 50%,3% 55%,5% L 65%,5% Q 75%,5% 85%,8% Q 100%,15% 100%,35% L 100%,100% Z"
-                        fill="none" stroke="#f5c422" strokeWidth="3" opacity="0.7" />
-                      <path d="M 5%,100% L 5%,37% Q 5%,18% 18%,11% Q 27%,8% 37%,8% L 46%,8% Q 50%,6% 50%,3% Q 50%,6% 54%,8% L 63%,8% Q 73%,8% 82%,11% Q 95%,18% 95%,37% L 95%,100% Z"
-                        fill="none" stroke="#388697" strokeWidth="2" opacity="0.5" />
+                    <svg
+                      className="absolute top-0 left-0 w-full h-full pointer-events-none"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M 0,100% L 0,35% Q 0,15% 15%,8% Q 25%,5% 35%,5% L 45%,5% Q 50%,3% 50%,0 Q 50%,3% 55%,5% L 65%,5% Q 75%,5% 85%,8% Q 100%,15% 100%,35% L 100%,100% Z"
+                        fill="none"
+                        stroke="#f5c422"
+                        strokeWidth="3"
+                        opacity="0.7"
+                      />
+                      <path
+                        d="M 5%,100% L 5%,37% Q 5%,18% 18%,11% Q 27%,8% 37%,8% L 46%,8% Q 50%,6% 50%,3% Q 50%,6% 54%,8% L 63%,8% Q 73%,8% 82%,11% Q 95%,18% 95%,37% L 95%,100% Z"
+                        fill="none"
+                        stroke="#388697"
+                        strokeWidth="2"
+                        opacity="0.5"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -269,18 +508,34 @@ export default function Index() {
                 {/* Decorative Arabesque side patterns */}
                 <div className="absolute top-1/2 -left-6 transform -translate-y-1/2">
                   <svg width="40" height="120" viewBox="0 0 40 120">
-                    <path d="M 10,20 Q 25,25 25,40 Q 25,55 10,60 Q 25,65 25,80 Q 25,95 10,100"
-                      fill="none" stroke="#388697" strokeWidth="2.5" />
-                    <path d="M 15,25 Q 20,30 20,40 Q 20,50 15,55 Q 20,60 20,70 Q 20,80 15,85"
-                      fill="none" stroke="#f5c422" strokeWidth="1.5" />
+                    <path
+                      d="M 10,20 Q 25,25 25,40 Q 25,55 10,60 Q 25,65 25,80 Q 25,95 10,100"
+                      fill="none"
+                      stroke="#388697"
+                      strokeWidth="2.5"
+                    />
+                    <path
+                      d="M 15,25 Q 20,30 20,40 Q 20,50 15,55 Q 20,60 20,70 Q 20,80 15,85"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="1.5"
+                    />
                   </svg>
                 </div>
                 <div className="absolute top-1/2 -right-6 transform -translate-y-1/2">
                   <svg width="40" height="120" viewBox="0 0 40 120">
-                    <path d="M 30,20 Q 15,25 15,40 Q 15,55 30,60 Q 15,65 15,80 Q 15,95 30,100"
-                      fill="none" stroke="#f5c422" strokeWidth="2.5" />
-                    <path d="M 25,25 Q 20,30 20,40 Q 20,50 25,55 Q 20,60 20,70 Q 20,80 25,85"
-                      fill="none" stroke="#388697" strokeWidth="1.5" />
+                    <path
+                      d="M 30,20 Q 15,25 15,40 Q 15,55 30,60 Q 15,65 15,80 Q 15,95 30,100"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="2.5"
+                    />
+                    <path
+                      d="M 25,25 Q 20,30 20,40 Q 20,50 25,55 Q 20,60 20,70 Q 20,80 25,85"
+                      fill="none"
+                      stroke="#388697"
+                      strokeWidth="1.5"
+                    />
                   </svg>
                 </div>
               </div>
@@ -291,12 +546,52 @@ export default function Index() {
         {/* Bottom Islamic Border Pattern - Kufic-inspired */}
         <div className="absolute bottom-0 left-0 right-0 h-6 overflow-hidden">
           <svg className="w-full h-full" preserveAspectRatio="none">
-            <pattern id="bottom-kufic" x="0" y="0" width="80" height="24" patternUnits="userSpaceOnUse">
-              <rect x="0" y="12" width="15" height="12" fill="#388697" opacity="0.2" />
-              <rect x="20" y="6" width="15" height="18" fill="#f5c422" opacity="0.2" />
-              <rect x="40" y="12" width="15" height="12" fill="#388697" opacity="0.2" />
-              <rect x="60" y="6" width="15" height="18" fill="#f5c422" opacity="0.2" />
-              <path d="M 0,12 L 80,12" stroke="#388697" strokeWidth="1" opacity="0.3" />
+            <pattern
+              id="bottom-kufic"
+              x="0"
+              y="0"
+              width="80"
+              height="24"
+              patternUnits="userSpaceOnUse"
+            >
+              <rect
+                x="0"
+                y="12"
+                width="15"
+                height="12"
+                fill="#388697"
+                opacity="0.2"
+              />
+              <rect
+                x="20"
+                y="6"
+                width="15"
+                height="18"
+                fill="#f5c422"
+                opacity="0.2"
+              />
+              <rect
+                x="40"
+                y="12"
+                width="15"
+                height="12"
+                fill="#388697"
+                opacity="0.2"
+              />
+              <rect
+                x="60"
+                y="6"
+                width="15"
+                height="18"
+                fill="#f5c422"
+                opacity="0.2"
+              />
+              <path
+                d="M 0,12 L 80,12"
+                stroke="#388697"
+                strokeWidth="1"
+                opacity="0.3"
+              />
             </pattern>
             <rect width="100%" height="100%" fill="url(#bottom-kufic)" />
           </svg>
@@ -314,16 +609,47 @@ export default function Index() {
         <div className="absolute top-0 left-0 right-0 h-10 overflow-hidden">
           <svg className="w-full h-full" preserveAspectRatio="none">
             <defs>
-              <pattern id="top-islamic-border" x="0" y="0" width="100" height="40" patternUnits="userSpaceOnUse">
+              <pattern
+                id="top-islamic-border"
+                x="0"
+                y="0"
+                width="100"
+                height="40"
+                patternUnits="userSpaceOnUse"
+              >
                 {/* Interlocking arches */}
-                <path d="M 0,40 L 0,25 Q 0,10 15,5 Q 25,10 25,25 L 25,40" fill="#f5c422" opacity="0.3" />
-                <path d="M 25,40 L 25,25 Q 25,10 40,5 Q 50,10 50,25 L 50,40" fill="#388697" opacity="0.3" />
-                <path d="M 50,40 L 50,25 Q 50,10 65,5 Q 75,10 75,25 L 75,40" fill="#f5c422" opacity="0.3" />
-                <path d="M 75,40 L 75,25 Q 75,10 90,5 Q 100,10 100,25 L 100,40" fill="#388697" opacity="0.3" />
+                <path
+                  d="M 0,40 L 0,25 Q 0,10 15,5 Q 25,10 25,25 L 25,40"
+                  fill="#f5c422"
+                  opacity="0.3"
+                />
+                <path
+                  d="M 25,40 L 25,25 Q 25,10 40,5 Q 50,10 50,25 L 50,40"
+                  fill="#388697"
+                  opacity="0.3"
+                />
+                <path
+                  d="M 50,40 L 50,25 Q 50,10 65,5 Q 75,10 75,25 L 75,40"
+                  fill="#f5c422"
+                  opacity="0.3"
+                />
+                <path
+                  d="M 75,40 L 75,25 Q 75,10 90,5 Q 100,10 100,25 L 100,40"
+                  fill="#388697"
+                  opacity="0.3"
+                />
                 {/* Crescent moons */}
-                <path d="M 12,8 Q 8,8 8,15 Q 8,22 12,22 Q 10,22 10,15 Q 10,8 12,8 Z" fill="#f5c422" opacity="0.5" />
+                <path
+                  d="M 12,8 Q 8,8 8,15 Q 8,22 12,22 Q 10,22 10,15 Q 10,8 12,8 Z"
+                  fill="#f5c422"
+                  opacity="0.5"
+                />
                 <circle cx="16" cy="11" r="1.5" fill="#f5c422" opacity="0.5" />
-                <path d="M 62,8 Q 58,8 58,15 Q 58,22 62,22 Q 60,22 60,15 Q 60,8 62,8 Z" fill="#388697" opacity="0.5" />
+                <path
+                  d="M 62,8 Q 58,8 58,15 Q 58,22 62,22 Q 60,22 60,15 Q 60,8 62,8 Z"
+                  fill="#388697"
+                  opacity="0.5"
+                />
                 <circle cx="66" cy="11" r="1.5" fill="#388697" opacity="0.5" />
               </pattern>
             </defs>
@@ -344,20 +670,48 @@ export default function Index() {
             <div ref={aboutHeadingRef}>
               <div className="flex items-center justify-center gap-6 mb-6">
                 {/* Islamic 12-pointed star */}
-                <svg width="44" height="44" viewBox="0 0 44 44" className="text-[#f5c422]">
-                  <path d="M 22,0 L 25,10 L 35,7 L 29,17 L 39,20 L 29,23 L 35,33 L 25,30 L 22,40 L 19,30 L 9,33 L 15,23 L 5,20 L 15,17 L 9,7 L 19,10 Z"
-                    fill="currentColor" opacity="0.8" />
+                <svg
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  className="text-[#f5c422]"
+                >
+                  <path
+                    d="M 22,0 L 25,10 L 35,7 L 29,17 L 39,20 L 29,23 L 35,33 L 25,30 L 22,40 L 19,30 L 9,33 L 15,23 L 5,20 L 15,17 L 9,7 L 19,10 Z"
+                    fill="currentColor"
+                    opacity="0.8"
+                  />
                   <circle cx="22" cy="20" r="7" fill="#15122e" />
-                  <circle cx="22" cy="20" r="4" fill="currentColor" opacity="0.6" />
+                  <circle
+                    cx="22"
+                    cy="20"
+                    r="4"
+                    fill="currentColor"
+                    opacity="0.6"
+                  />
                 </svg>
                 <span className="font-cinzel text-xs uppercase tracking-[0.5em] text-[#f5c422]">
                   About the Tournament
                 </span>
-                <svg width="44" height="44" viewBox="0 0 44 44" className="text-[#f5c422]">
-                  <path d="M 22,0 L 25,10 L 35,7 L 29,17 L 39,20 L 29,23 L 35,33 L 25,30 L 22,40 L 19,30 L 9,33 L 15,23 L 5,20 L 15,17 L 9,7 L 19,10 Z"
-                    fill="currentColor" opacity="0.8" />
+                <svg
+                  width="44"
+                  height="44"
+                  viewBox="0 0 44 44"
+                  className="text-[#f5c422]"
+                >
+                  <path
+                    d="M 22,0 L 25,10 L 35,7 L 29,17 L 39,20 L 29,23 L 35,33 L 25,30 L 22,40 L 19,30 L 9,33 L 15,23 L 5,20 L 15,17 L 9,7 L 19,10 Z"
+                    fill="currentColor"
+                    opacity="0.8"
+                  />
                   <circle cx="22" cy="20" r="7" fill="#15122e" />
-                  <circle cx="22" cy="20" r="4" fill="currentColor" opacity="0.6" />
+                  <circle
+                    cx="22"
+                    cy="20"
+                    r="4"
+                    fill="currentColor"
+                    opacity="0.6"
+                  />
                 </svg>
               </div>
               <h2 className="font-display text-7xl md:text-8xl font-black text-[#f5c422] leading-tight mb-6">
@@ -366,10 +720,18 @@ export default function Index() {
               {/* Arabesque knot pattern divider */}
               <div className="flex items-center justify-center gap-3">
                 <svg width="140" height="24" viewBox="0 0 140 24">
-                  <path d="M 0,12 Q 20,4 40,12 T 80,12 T 120,12 Q 130,16 140,12"
-                    fill="none" stroke="#388697" strokeWidth="2.5" />
-                  <path d="M 0,12 Q 20,20 40,12 T 80,12 T 120,12 Q 130,8 140,12"
-                    fill="none" stroke="#f5c422" strokeWidth="2" />
+                  <path
+                    d="M 0,12 Q 20,4 40,12 T 80,12 T 120,12 Q 130,16 140,12"
+                    fill="none"
+                    stroke="#388697"
+                    strokeWidth="2.5"
+                  />
+                  <path
+                    d="M 0,12 Q 20,20 40,12 T 80,12 T 120,12 Q 130,8 140,12"
+                    fill="none"
+                    stroke="#f5c422"
+                    strokeWidth="2"
+                  />
                   <circle cx="40" cy="12" r="3" fill="#f5c422" />
                   <circle cx="80" cy="12" r="3" fill="#388697" />
                   <circle cx="120" cy="12" r="3" fill="#f5c422" />
@@ -384,13 +746,30 @@ export default function Index() {
               <div className="relative">
                 {/* Islamic pointed arch frame - Alhambra style */}
                 <div className="absolute -inset-4 z-0">
-                  <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path d="M 5,100 L 5,45 Q 5,25 15,15 Q 25,8 38,8 L 47,8 Q 50,6 50,3 Q 50,6 53,8 L 62,8 Q 75,8 85,15 Q 95,25 95,45 L 95,100 Z"
-                      fill="none" stroke="#f5c422" strokeWidth="2.5" />
-                    <path d="M 10,100 L 10,47 Q 10,28 19,19 Q 28,12 40,12 L 48,12 Q 50,10 50,7 Q 50,10 52,12 L 60,12 Q 72,12 81,19 Q 90,28 90,47 L 90,100 Z"
-                      fill="none" stroke="#388697" strokeWidth="1.8" />
+                  <svg
+                    className="w-full h-full"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M 5,100 L 5,45 Q 5,25 15,15 Q 25,8 38,8 L 47,8 Q 50,6 50,3 Q 50,6 53,8 L 62,8 Q 75,8 85,15 Q 95,25 95,45 L 95,100 Z"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="2.5"
+                    />
+                    <path
+                      d="M 10,100 L 10,47 Q 10,28 19,19 Q 28,12 40,12 L 48,12 Q 50,10 50,7 Q 50,10 52,12 L 60,12 Q 72,12 81,19 Q 90,28 90,47 L 90,100 Z"
+                      fill="none"
+                      stroke="#388697"
+                      strokeWidth="1.8"
+                    />
                     {/* Mocárabe detail at apex */}
-                    <path d="M 45,10 L 48,15 L 50,10 L 52,15 L 55,10" fill="none" stroke="#f5c422" strokeWidth="1" />
+                    <path
+                      d="M 45,10 L 48,15 L 50,10 L 52,15 L 55,10"
+                      fill="none"
+                      stroke="#f5c422"
+                      strokeWidth="1"
+                    />
                   </svg>
                 </div>
 
@@ -404,30 +783,58 @@ export default function Index() {
 
                 {/* Islamic Geometric Star Corner Ornaments */}
                 <div className="absolute -top-5 -left-5 z-10">
-                  <svg width="38" height="38" viewBox="0 0 38 38" className="text-[#f5c422]">
-                    <path d="M 19,2 L 22,13 L 33,10 L 26,19 L 37,22 L 26,25 L 33,36 L 22,33 L 19,44 L 16,33 L 5,36 L 12,25 L 1,22 L 12,19 L 5,10 L 16,13 Z"
-                      fill="currentColor" />
+                  <svg
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                    className="text-[#f5c422]"
+                  >
+                    <path
+                      d="M 19,2 L 22,13 L 33,10 L 26,19 L 37,22 L 26,25 L 33,36 L 22,33 L 19,44 L 16,33 L 5,36 L 12,25 L 1,22 L 12,19 L 5,10 L 16,13 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="19" cy="22" r="5" fill="#15122e" />
                   </svg>
                 </div>
                 <div className="absolute -top-5 -right-5 z-10">
-                  <svg width="38" height="38" viewBox="0 0 38 38" className="text-[#388697]">
-                    <path d="M 19,2 L 22,13 L 33,10 L 26,19 L 37,22 L 26,25 L 33,36 L 22,33 L 19,44 L 16,33 L 5,36 L 12,25 L 1,22 L 12,19 L 5,10 L 16,13 Z"
-                      fill="currentColor" />
+                  <svg
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                    className="text-[#388697]"
+                  >
+                    <path
+                      d="M 19,2 L 22,13 L 33,10 L 26,19 L 37,22 L 26,25 L 33,36 L 22,33 L 19,44 L 16,33 L 5,36 L 12,25 L 1,22 L 12,19 L 5,10 L 16,13 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="19" cy="22" r="5" fill="#15122e" />
                   </svg>
                 </div>
                 <div className="absolute -bottom-5 -left-5 z-10">
-                  <svg width="38" height="38" viewBox="0 0 38 38" className="text-[#388697]">
-                    <path d="M 19,2 L 22,13 L 33,10 L 26,19 L 37,22 L 26,25 L 33,36 L 22,33 L 19,44 L 16,33 L 5,36 L 12,25 L 1,22 L 12,19 L 5,10 L 16,13 Z"
-                      fill="currentColor" />
+                  <svg
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                    className="text-[#388697]"
+                  >
+                    <path
+                      d="M 19,2 L 22,13 L 33,10 L 26,19 L 37,22 L 26,25 L 33,36 L 22,33 L 19,44 L 16,33 L 5,36 L 12,25 L 1,22 L 12,19 L 5,10 L 16,13 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="19" cy="22" r="5" fill="#15122e" />
                   </svg>
                 </div>
                 <div className="absolute -bottom-5 -right-5 z-10">
-                  <svg width="38" height="38" viewBox="0 0 38 38" className="text-[#f5c422]">
-                    <path d="M 19,2 L 22,13 L 33,10 L 26,19 L 37,22 L 26,25 L 33,36 L 22,33 L 19,44 L 16,33 L 5,36 L 12,25 L 1,22 L 12,19 L 5,10 L 16,13 Z"
-                      fill="currentColor" />
+                  <svg
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                    className="text-[#f5c422]"
+                  >
+                    <path
+                      d="M 19,2 L 22,13 L 33,10 L 26,19 L 37,22 L 26,25 L 33,36 L 22,33 L 19,44 L 16,33 L 5,36 L 12,25 L 1,22 L 12,19 L 5,10 L 16,13 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="19" cy="22" r="5" fill="#15122e" />
                   </svg>
                 </div>
@@ -441,19 +848,51 @@ export default function Index() {
                 <div className="relative bg-gradient-to-r from-[#388697]/20 to-transparent p-8 border-l-4 border-[#f5c422]">
                   {/* Decorative Islamic corners with arabesque */}
                   <div className="absolute top-0 left-0 w-10 h-10">
-                    <svg viewBox="0 0 40 40" className="w-full h-full text-[#f5c422]">
-                      <path d="M 0,0 L 0,20 Q 0,30 10,30 L 30,30" fill="none" stroke="currentColor" strokeWidth="2.5" />
-                      <path d="M 5,5 Q 5,15 15,15" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                    <svg
+                      viewBox="0 0 40 40"
+                      className="w-full h-full text-[#f5c422]"
+                    >
+                      <path
+                        d="M 0,0 L 0,20 Q 0,30 10,30 L 30,30"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      />
+                      <path
+                        d="M 5,5 Q 5,15 15,15"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      />
                       <circle cx="8" cy="8" r="2" fill="currentColor" />
                     </svg>
                   </div>
                   <p className="font-cinzel text-lg text-[#f3e8dc] leading-relaxed">
-                    Vakruta is NIT Rourkela's flagship Asian Parliamentary Debate tournament, bringing together the brightest minds from institutions across India in a celebration of eloquence and intellect. Organized by Clarion, the literary and debating club of NIT Rourkela, this tournament embodies our commitment to fostering intellectual discourse and oratorical excellence.
+                    Vakruta is NIT Rourkela's flagship Asian Parliamentary
+                    Debate tournament, bringing together the brightest minds
+                    from institutions across India in a celebration of eloquence
+                    and intellect. Organized by Clarion, the literary and
+                    debating club of NIT Rourkela, this tournament embodies our
+                    commitment to fostering intellectual discourse and
+                    oratorical excellence.
                   </p>
                   <div className="absolute bottom-0 right-0 w-10 h-10">
-                    <svg viewBox="0 0 40 40" className="w-full h-full text-[#388697]">
-                      <path d="M 40,40 L 40,20 Q 40,10 30,10 L 10,10" fill="none" stroke="currentColor" strokeWidth="2.5" />
-                      <path d="M 35,35 Q 35,25 25,25" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                    <svg
+                      viewBox="0 0 40 40"
+                      className="w-full h-full text-[#388697]"
+                    >
+                      <path
+                        d="M 40,40 L 40,20 Q 40,10 30,10 L 10,10"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      />
+                      <path
+                        d="M 35,35 Q 35,25 25,25"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      />
                       <circle cx="32" cy="32" r="2" fill="currentColor" />
                     </svg>
                   </div>
@@ -461,19 +900,48 @@ export default function Index() {
 
                 <div className="relative bg-gradient-to-l from-[#f5c422]/20 to-transparent p-8 border-r-4 border-[#388697]">
                   <div className="absolute top-0 right-0 w-10 h-10">
-                    <svg viewBox="0 0 40 40" className="w-full h-full text-[#388697]">
-                      <path d="M 40,0 L 40,20 Q 40,30 30,30 L 10,30" fill="none" stroke="currentColor" strokeWidth="2.5" />
-                      <path d="M 35,5 Q 35,15 25,15" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                    <svg
+                      viewBox="0 0 40 40"
+                      className="w-full h-full text-[#388697]"
+                    >
+                      <path
+                        d="M 40,0 L 40,20 Q 40,30 30,30 L 10,30"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      />
+                      <path
+                        d="M 35,5 Q 35,15 25,15"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      />
                       <circle cx="32" cy="8" r="2" fill="currentColor" />
                     </svg>
                   </div>
                   <p className="font-cinzel text-lg text-[#f3e8dc] leading-relaxed">
-                    Through rigorous debate rounds, engaging workshops, and competitive spirit, Vakruta cultivates eloquence, analytical thinking, and the ability to articulate complex ideas with clarity and conviction.
+                    Through rigorous debate rounds, engaging workshops, and
+                    competitive spirit, Vakruta cultivates eloquence, analytical
+                    thinking, and the ability to articulate complex ideas with
+                    clarity and conviction.
                   </p>
                   <div className="absolute bottom-0 left-0 w-10 h-10">
-                    <svg viewBox="0 0 40 40" className="w-full h-full text-[#f5c422]">
-                      <path d="M 0,40 L 0,20 Q 0,10 10,10 L 30,10" fill="none" stroke="currentColor" strokeWidth="2.5" />
-                      <path d="M 5,35 Q 5,25 15,25" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                    <svg
+                      viewBox="0 0 40 40"
+                      className="w-full h-full text-[#f5c422]"
+                    >
+                      <path
+                        d="M 0,40 L 0,20 Q 0,10 10,10 L 30,10"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                      />
+                      <path
+                        d="M 5,35 Q 5,25 15,25"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                      />
                       <circle cx="8" cy="32" r="2" fill="currentColor" />
                     </svg>
                   </div>
@@ -484,34 +952,63 @@ export default function Index() {
                   {[
                     { num: "100+", label: "Debaters", color: "#f5c422" },
                     { num: "20+", label: "Rounds", color: "#388697" },
-                    { num: "3", label: "Days", color: "#f5c422" }
+                    { num: "3", label: "Days", color: "#f5c422" },
                   ].map((stat, i) => (
                     <div key={i} className="text-center relative group">
                       {/* Islamic 16-pointed star background */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-10">
                         <svg width="110" height="110" viewBox="0 0 110 110">
-                          <path d="M 55,5 L 60,25 L 80,20 L 70,40 L 90,45 L 70,50 L 80,70 L 60,65 L 55,85 L 50,65 L 30,70 L 40,50 L 20,45 L 40,40 L 30,20 L 50,25 Z"
-                            fill="currentColor" style={{ color: stat.color }} opacity="0.6" />
-                          <circle cx="55" cy="45" r="15" fill="currentColor" style={{ color: stat.color }} opacity="0.3" />
+                          <path
+                            d="M 55,5 L 60,25 L 80,20 L 70,40 L 90,45 L 70,50 L 80,70 L 60,65 L 55,85 L 50,65 L 30,70 L 40,50 L 20,45 L 40,40 L 30,20 L 50,25 Z"
+                            fill="currentColor"
+                            style={{ color: stat.color }}
+                            opacity="0.6"
+                          />
+                          <circle
+                            cx="55"
+                            cy="45"
+                            r="15"
+                            fill="currentColor"
+                            style={{ color: stat.color }}
+                            opacity="0.3"
+                          />
                         </svg>
                       </div>
                       <div className="relative border-2 border-[#f3e8dc]/20 p-6 group-hover:border-[#f5c422] transition-colors duration-300">
                         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                          <svg width="24" height="24" viewBox="0 0 24 24" style={{ color: stat.color }}>
-                            <path d="M 12,0 L 14,6 L 20,5 L 16,10 L 22,12 L 16,14 L 20,19 L 14,18 L 12,24 L 10,18 L 4,19 L 8,14 L 2,12 L 8,10 L 4,5 L 10,6 Z"
-                              fill="currentColor" />
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            style={{ color: stat.color }}
+                          >
+                            <path
+                              d="M 12,0 L 14,6 L 20,5 L 16,10 L 22,12 L 16,14 L 20,19 L 14,18 L 12,24 L 10,18 L 4,19 L 8,14 L 2,12 L 8,10 L 4,5 L 10,6 Z"
+                              fill="currentColor"
+                            />
                             <circle cx="12" cy="12" r="3" fill="#15122e" />
                           </svg>
                         </div>
-                        <p className="font-display text-5xl font-black mb-2" style={{ color: stat.color }}>
+                        <p
+                          className="font-display text-5xl font-black mb-2"
+                          style={{ color: stat.color }}
+                        >
                           {stat.num}
                         </p>
                         <p className="font-cinzel text-xs uppercase tracking-widest text-[#f3e8dc]">
                           {stat.label}
                         </p>
                         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-                          <svg width="24" height="24" viewBox="0 0 24 24" className="text-[#388697]">
-                            <path d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z" fill="currentColor" />
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            className="text-[#388697]"
+                          >
+                            <path
+                              d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z"
+                              fill="currentColor"
+                            />
                             <circle cx="17" cy="7" r="2" fill="currentColor" />
                           </svg>
                         </div>
@@ -544,10 +1041,13 @@ export default function Index() {
       >
         {/* Ornate Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `radial-gradient(circle, #388697 2px, transparent 2px)`,
-            backgroundSize: '60px 60px'
-          }}></div>
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage: `radial-gradient(circle, #388697 2px, transparent 2px)`,
+              backgroundSize: "60px 60px",
+            }}
+          ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -569,15 +1069,39 @@ export default function Index() {
             </h2>
 
             <div className="flex items-center justify-center gap-4">
-              <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#f5c422]">
-                <path d="M 20,2 Q 13,2 13,20 Q 13,38 20,38 Q 16,38 16,20 Q 16,2 20,2 Z" fill="currentColor" />
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                className="text-[#f5c422]"
+              >
+                <path
+                  d="M 20,2 Q 13,2 13,20 Q 13,38 20,38 Q 16,38 16,20 Q 16,2 20,2 Z"
+                  fill="currentColor"
+                />
                 <circle cx="28" cy="10" r="3.5" fill="currentColor" />
               </svg>
-              <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#388697]">
-                <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                className="text-[#388697]"
+              >
+                <path
+                  d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z"
+                  fill="currentColor"
+                />
               </svg>
-              <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#f5c422]">
-                <path d="M 20,2 Q 27,2 27,20 Q 27,38 20,38 Q 24,38 24,20 Q 24,2 20,2 Z" fill="currentColor" />
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                className="text-[#f5c422]"
+              >
+                <path
+                  d="M 20,2 Q 27,2 27,20 Q 27,38 20,38 Q 24,38 24,20 Q 24,2 20,2 Z"
+                  fill="currentColor"
+                />
                 <circle cx="12" cy="10" r="3.5" fill="currentColor" />
               </svg>
             </div>
@@ -606,22 +1130,34 @@ export default function Index() {
                 accent: "#388697",
               },
             ].map((stat, idx) => (
-              <div
-                key={idx}
-                className="relative group"
-              >
+              <div key={idx} className="relative group">
                 {/* Ornate Frame Structure */}
                 <div className="relative">
                   {/* Multi-layer Border */}
                   <div className="absolute -inset-6 border-4 border-[#15122e] opacity-20"></div>
-                  <div className="absolute -inset-4 border-2" style={{ borderColor: stat.accent }}></div>
+                  <div
+                    className="absolute -inset-4 border-2"
+                    style={{ borderColor: stat.accent }}
+                  ></div>
                   <div className="absolute -inset-3 border border-[#15122e] opacity-40"></div>
 
                   {/* Corner Ornaments */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 border-t-4 border-l-4" style={{ borderColor: stat.accent }}></div>
-                  <div className="absolute -top-4 -right-4 w-12 h-12 border-t-4 border-r-4" style={{ borderColor: stat.accent }}></div>
-                  <div className="absolute -bottom-4 -left-4 w-12 h-12 border-b-4 border-l-4" style={{ borderColor: stat.accent }}></div>
-                  <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-4 border-r-4" style={{ borderColor: stat.accent }}></div>
+                  <div
+                    className="absolute -top-4 -left-4 w-12 h-12 border-t-4 border-l-4"
+                    style={{ borderColor: stat.accent }}
+                  ></div>
+                  <div
+                    className="absolute -top-4 -right-4 w-12 h-12 border-t-4 border-r-4"
+                    style={{ borderColor: stat.accent }}
+                  ></div>
+                  <div
+                    className="absolute -bottom-4 -left-4 w-12 h-12 border-b-4 border-l-4"
+                    style={{ borderColor: stat.accent }}
+                  ></div>
+                  <div
+                    className="absolute -bottom-4 -right-4 w-12 h-12 border-b-4 border-r-4"
+                    style={{ borderColor: stat.accent }}
+                  ></div>
 
                   {/* Image Container */}
                   <div className="relative h-[500px] overflow-hidden bg-[#15122e] p-3">
@@ -639,9 +1175,18 @@ export default function Index() {
                       <div className="relative">
                         {/* Decorative Top Border */}
                         <div className="flex items-center gap-2 mb-6">
-                          <div className="w-3 h-3 rotate-45" style={{ backgroundColor: stat.accent }}></div>
-                          <div className="flex-1 h-px" style={{ backgroundColor: stat.accent }}></div>
-                          <div className="w-3 h-3 rotate-45" style={{ backgroundColor: stat.accent }}></div>
+                          <div
+                            className="w-3 h-3 rotate-45"
+                            style={{ backgroundColor: stat.accent }}
+                          ></div>
+                          <div
+                            className="flex-1 h-px"
+                            style={{ backgroundColor: stat.accent }}
+                          ></div>
+                          <div
+                            className="w-3 h-3 rotate-45"
+                            style={{ backgroundColor: stat.accent }}
+                          ></div>
                         </div>
 
                         <p className="font-cinzel text-xs uppercase tracking-[0.4em] text-[#f3e8dc] mb-3">
@@ -649,8 +1194,14 @@ export default function Index() {
                         </p>
 
                         <div className="relative inline-block">
-                          <div className="absolute -inset-2 opacity-30" style={{ backgroundColor: stat.accent }}></div>
-                          <p className="relative font-display text-7xl font-black px-4 py-2" style={{ color: stat.accent }}>
+                          <div
+                            className="absolute -inset-2 opacity-30"
+                            style={{ backgroundColor: stat.accent }}
+                          ></div>
+                          <p
+                            className="relative font-display text-7xl font-black px-4 py-2"
+                            style={{ color: stat.accent }}
+                          >
                             {stat.value}
                           </p>
                         </div>
@@ -659,11 +1210,22 @@ export default function Index() {
                         <div className="mt-6 flex items-center justify-between">
                           <div className="flex gap-2">
                             <div className="w-2 h-2 rotate-45 bg-[#f3e8dc]"></div>
-                            <div className="w-2 h-2 rotate-45" style={{ backgroundColor: stat.accent }}></div>
+                            <div
+                              className="w-2 h-2 rotate-45"
+                              style={{ backgroundColor: stat.accent }}
+                            ></div>
                             <div className="w-2 h-2 rotate-45 bg-[#f3e8dc]"></div>
                           </div>
-                          <svg width="30" height="30" viewBox="0 0 30 30" style={{ color: stat.accent }}>
-                            <path d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z" fill="currentColor" />
+                          <svg
+                            width="30"
+                            height="30"
+                            viewBox="0 0 30 30"
+                            style={{ color: stat.accent }}
+                          >
+                            <path
+                              d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z"
+                              fill="currentColor"
+                            />
                           </svg>
                         </div>
                       </div>
@@ -685,9 +1247,21 @@ export default function Index() {
         <div className="absolute inset-0 opacity-10">
           <svg className="w-full h-full" viewBox="0 0 100 100">
             <defs>
-              <pattern id="mughal-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <pattern
+                id="mughal-pattern"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+              >
                 <circle cx="10" cy="10" r="1.5" fill="#15122e" />
-                <path d="M 10,5 L 15,10 L 10,15 L 5,10 Z" fill="none" stroke="#15122e" strokeWidth="0.5" />
+                <path
+                  d="M 10,5 L 15,10 L 10,15 L 5,10 Z"
+                  fill="none"
+                  stroke="#15122e"
+                  strokeWidth="0.5"
+                />
               </pattern>
             </defs>
             <rect width="100" height="100" fill="url(#mughal-pattern)" />
@@ -697,19 +1271,18 @@ export default function Index() {
         {/* Decorative Border */}
         <div className="absolute top-0 left-0 right-0 hidden sm:flex justify-center gap-2 sm:gap-4 py-3 sm:py-4">
           {[...Array(8)].map((_, i) => (
-            <div key={i} className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-[#f5c422] opacity-50"></div>
+            <div
+              key={i}
+              className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-[#f5c422] opacity-50"
+            ></div>
           ))}
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 sm:gap-10 md:gap-12 items-center">
-
             {/* Mobile: Heading First */}
             <div className="md:hidden">
-              <div
-                ref={brochureHeadingRef}
-                className="mb-8 sm:mb-10"
-              >
+              <div ref={brochureHeadingRef} className="mb-8 sm:mb-10">
                 {/* Ornate Header */}
                 <div className="flex items-center gap-2 sm:gap-4 mb-4 sm:mb-6">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-[#f5c422] rotate-45"></div>
@@ -718,26 +1291,41 @@ export default function Index() {
                 </div>
 
                 <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none mb-4 sm:mb-6">
-                  COMPLETE<br />GUIDE
+                  COMPLETE
+                  <br />
+                  GUIDE
                 </h2>
 
                 <div className="flex items-center gap-2 sm:gap-3">
-                  <svg width="24" height="24" viewBox="0 0 40 40" className="text-[#f5c422] sm:w-[30px] sm:h-[30px]">
-                    <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 40 40"
+                    className="text-[#f5c422] sm:w-[30px] sm:h-[30px]"
+                  >
+                    <path
+                      d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z"
+                      fill="currentColor"
+                    />
                   </svg>
                   <div className="w-16 sm:w-20 h-1 bg-[#f5c422]"></div>
-                  <svg width="24" height="24" viewBox="0 0 40 40" className="text-[#f5c422] sm:w-[30px] sm:h-[30px]">
-                    <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 40 40"
+                    className="text-[#f5c422] sm:w-[30px] sm:h-[30px]"
+                  >
+                    <path
+                      d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
               </div>
             </div>
 
             {/* Left - Ornate Manuscript Frame */}
-            <div
-              ref={brochureLeftRef}
-              className="md:col-span-2"
-            >
+            <div ref={brochureLeftRef} className="md:col-span-2">
               <div className="relative">
                 {/* Ornate Multi-layer Frame */}
                 <div className="absolute -inset-4 sm:-inset-6 md:-inset-8 border-2 border-[#f5c422]"></div>
@@ -763,13 +1351,29 @@ export default function Index() {
 
                 {/* Ornamental Star Accents */}
                 <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
-                  <svg width="24" height="24" viewBox="0 0 30 30" className="text-[#f5c422] sm:w-[30px] sm:h-[30px]">
-                    <path d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z" fill="currentColor" />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 30 30"
+                    className="text-[#f5c422] sm:w-[30px] sm:h-[30px]"
+                  >
+                    <path
+                      d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
                 <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 transform -translate-x-1/2">
-                  <svg width="24" height="24" viewBox="0 0 30 30" className="text-[#15122e] sm:w-[30px] sm:h-[30px]">
-                    <path d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z" fill="currentColor" />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 30 30"
+                    className="text-[#15122e] sm:w-[30px] sm:h-[30px]"
+                  >
+                    <path
+                      d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
               </div>
@@ -790,16 +1394,34 @@ export default function Index() {
                 </div>
 
                 <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-6">
-                  COMPLETE<br />GUIDE
+                  COMPLETE
+                  <br />
+                  GUIDE
                 </h2>
 
                 <div className="flex items-center gap-3">
-                  <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#f5c422]">
-                    <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    className="text-[#f5c422]"
+                  >
+                    <path
+                      d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z"
+                      fill="currentColor"
+                    />
                   </svg>
                   <div className="w-32 h-1 bg-[#f5c422]"></div>
-                  <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#f5c422]">
-                    <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    className="text-[#f5c422]"
+                  >
+                    <path
+                      d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </div>
               </div>
@@ -814,7 +1436,9 @@ export default function Index() {
                   <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 w-4 h-4 sm:w-6 sm:h-6 bg-[#f5c422]"></div>
 
                   <p className="font-cinzel text-sm sm:text-base md:text-lg text-[#f3e8dc] leading-relaxed mb-6 sm:mb-8 italic">
-                    Download our comprehensive tournament manuscript featuring complete details about Vakruta's debate format, schedule, rules, and registration information.
+                    Download our comprehensive tournament manuscript featuring
+                    complete details about Vakruta's debate format, schedule,
+                    rules, and registration information.
                   </p>
 
                   {/* Ornamental List */}
@@ -833,7 +1457,9 @@ export default function Index() {
                         <div className="flex-shrink-0 mt-1 sm:mt-2">
                           <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-[#f5c422] rotate-45 group-hover:bg-[#f5c422] transition-colors duration-300"></div>
                         </div>
-                        <span className="font-cinzel text-xs sm:text-sm text-[#f3e8dc] leading-relaxed">{item}</span>
+                        <span className="font-cinzel text-xs sm:text-sm text-[#f3e8dc] leading-relaxed">
+                          {item}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -846,12 +1472,26 @@ export default function Index() {
 
                   <button className="relative w-full bg-[#f5c422] text-[#15122e] font-display text-xl sm:text-2xl md:text-2xl font-black py-4 sm:py-5 md:py-6 px-4 sm:px-6 md:px-8 uppercase tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] group-hover:bg-[#f3e8dc] transition-all duration-300">
                     <span className="inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+                      >
                         <path d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z" />
                         <circle cx="17" cy="7" r="2.5" />
                       </svg>
-                      <span className="text-lg sm:text-xl md:text-2xl lg:text-2xl">Download Brochure</span>
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
+                      <span className="text-xl sm:text-xl md:text-2xl lg:text-2xl">
+                        Download Brochure
+                      </span>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+                      >
                         <path d="M 12,2 Q 17,2 17,12 Q 17,22 12,22 Q 15,22 15,12 Q 15,2 12,2 Z" />
                         <circle cx="7" cy="7" r="2.5" />
                       </svg>
@@ -865,7 +1505,10 @@ export default function Index() {
         {/* Bottom Decorative Border */}
         <div className="absolute bottom-0 left-0 right-0 hidden sm:flex justify-center gap-2 sm:gap-4 py-3 sm:py-4">
           {[...Array(8)].map((_, i) => (
-            <div key={i} className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-[#f5c422] opacity-50"></div>
+            <div
+              key={i}
+              className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-[#f5c422] opacity-50"
+            ></div>
           ))}
         </div>
       </section>
@@ -892,8 +1535,16 @@ export default function Index() {
           {[...Array(12)].map((_, i) => (
             <div key={i}>
               {i % 3 === 0 ? (
-                <svg width="16" height="16" viewBox="0 0 20 20" className="text-[#f5c422] opacity-30 sm:w-5 sm:h-5">
-                  <path d="M 10,2 Q 6,2 6,10 Q 6,18 10,18 Q 8,18 8,10 Q 8,2 10,2 Z" fill="currentColor" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 20 20"
+                  className="text-[#f5c422] opacity-30 sm:w-5 sm:h-5"
+                >
+                  <path
+                    d="M 10,2 Q 6,2 6,10 Q 6,18 10,18 Q 8,18 8,10 Q 8,2 10,2 Z"
+                    fill="currentColor"
+                  />
                   <circle cx="14" cy="6" r="1.5" fill="currentColor" />
                 </svg>
               ) : (
@@ -928,26 +1579,58 @@ export default function Index() {
 
                 {/* Crescents in Corners - Responsive */}
                 <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 md:-top-6 md:-left-6">
-                  <svg width="28" height="28" viewBox="0 0 44 44" className="text-[#f5c422] sm:w-9 sm:h-9 md:w-11 md:h-11">
-                    <path d="M 22,6 Q 14,6 14,22 Q 14,38 22,38 Q 17,38 17,22 Q 17,6 22,6 Z" fill="currentColor" />
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 44 44"
+                    className="text-[#f5c422] sm:w-9 sm:h-9 md:w-11 md:h-11"
+                  >
+                    <path
+                      d="M 22,6 Q 14,6 14,22 Q 14,38 22,38 Q 17,38 17,22 Q 17,6 22,6 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="32" cy="14" r="4" fill="currentColor" />
                   </svg>
                 </div>
                 <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 md:-top-6 md:-right-6">
-                  <svg width="28" height="28" viewBox="0 0 44 44" className="text-[#388697] sm:w-9 sm:h-9 md:w-11 md:h-11">
-                    <path d="M 22,6 Q 30,6 30,22 Q 30,38 22,38 Q 27,38 27,22 Q 27,6 22,6 Z" fill="currentColor" />
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 44 44"
+                    className="text-[#388697] sm:w-9 sm:h-9 md:w-11 md:h-11"
+                  >
+                    <path
+                      d="M 22,6 Q 30,6 30,22 Q 30,38 22,38 Q 27,38 27,22 Q 27,6 22,6 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="12" cy="14" r="4" fill="currentColor" />
                   </svg>
                 </div>
                 <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 md:-bottom-6 md:-left-6">
-                  <svg width="28" height="28" viewBox="0 0 44 44" className="text-[#388697] sm:w-9 sm:h-9 md:w-11 md:h-11">
-                    <path d="M 22,6 Q 14,6 14,22 Q 14,38 22,38 Q 17,38 17,22 Q 17,6 22,6 Z" fill="currentColor" />
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 44 44"
+                    className="text-[#388697] sm:w-9 sm:h-9 md:w-11 md:h-11"
+                  >
+                    <path
+                      d="M 22,6 Q 14,6 14,22 Q 14,38 22,38 Q 17,38 17,22 Q 17,6 22,6 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="32" cy="30" r="4" fill="currentColor" />
                   </svg>
                 </div>
                 <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-bottom-6 md:-right-6">
-                  <svg width="28" height="28" viewBox="0 0 44 44" className="text-[#f5c422] sm:w-9 sm:h-9 md:w-11 md:h-11">
-                    <path d="M 22,6 Q 30,6 30,22 Q 30,38 22,38 Q 27,38 27,22 Q 27,6 22,6 Z" fill="currentColor" />
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 44 44"
+                    className="text-[#f5c422] sm:w-9 sm:h-9 md:w-11 md:h-11"
+                  >
+                    <path
+                      d="M 22,6 Q 30,6 30,22 Q 30,38 22,38 Q 27,38 27,22 Q 27,6 22,6 Z"
+                      fill="currentColor"
+                    />
                     <circle cx="12" cy="30" r="4" fill="currentColor" />
                   </svg>
                 </div>
@@ -961,7 +1644,9 @@ export default function Index() {
                     <div className="w-3 h-3 sm:w-5 sm:h-5 md:w-6 md:h-6 rotate-45 border border-[#f5c422] sm:border-2"></div>
                     <div className="w-12 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-[#388697]"></div>
                   </div>
-                  <p className="font-display text-3xl sm:text-5xl md:text-6xl font-black text-white">2025</p>
+                  <p className="font-display text-3xl sm:text-5xl md:text-6xl font-black text-white">
+                    2025
+                  </p>
                 </div>
               </div>
             </div>
@@ -976,7 +1661,10 @@ export default function Index() {
                 <div className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-[#388697]"></div>
 
                 <p className="font-cinzel text-base sm:text-lg md:text-xl lg:text-2xl text-[#f3e8dc] leading-relaxed italic">
-                  Step onto the stage at NIT Rourkela's premier debate tournament. Challenge your intellect, sharpen your arguments, and compete with the nation's finest debaters in the grand tradition of scholarly discourse.
+                  Step onto the stage at NIT Rourkela's premier debate
+                  tournament. Challenge your intellect, sharpen your arguments,
+                  and compete with the nation's finest debaters in the grand
+                  tradition of scholarly discourse.
                 </p>
               </div>
             </div>
@@ -990,26 +1678,58 @@ export default function Index() {
 
               {/* Corner Crescents - Responsive */}
               <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4">
-                <svg width="24" height="24" viewBox="0 0 32 32" className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8">
-                  <path d="M 16,4 Q 10,4 10,16 Q 10,28 16,28 Q 13,28 13,16 Q 13,4 16,4 Z" fill="currentColor" />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 32 32"
+                  className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8"
+                >
+                  <path
+                    d="M 16,4 Q 10,4 10,16 Q 10,28 16,28 Q 13,28 13,16 Q 13,4 16,4 Z"
+                    fill="currentColor"
+                  />
                   <circle cx="22" cy="10" r="3" fill="currentColor" />
                 </svg>
               </div>
               <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 md:-top-4 md:-right-4">
-                <svg width="24" height="24" viewBox="0 0 32 32" className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8">
-                  <path d="M 16,4 Q 22,4 22,16 Q 22,28 16,28 Q 19,28 19,16 Q 19,4 16,4 Z" fill="currentColor" />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 32 32"
+                  className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8"
+                >
+                  <path
+                    d="M 16,4 Q 22,4 22,16 Q 22,28 16,28 Q 19,28 19,16 Q 19,4 16,4 Z"
+                    fill="currentColor"
+                  />
                   <circle cx="10" cy="10" r="3" fill="currentColor" />
                 </svg>
               </div>
               <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 md:-bottom-4 md:-left-4">
-                <svg width="24" height="24" viewBox="0 0 32 32" className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8">
-                  <path d="M 16,4 Q 10,4 10,16 Q 10,28 16,28 Q 13,28 13,16 Q 13,4 16,4 Z" fill="currentColor" />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 32 32"
+                  className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8"
+                >
+                  <path
+                    d="M 16,4 Q 10,4 10,16 Q 10,28 16,28 Q 13,28 13,16 Q 13,4 16,4 Z"
+                    fill="currentColor"
+                  />
                   <circle cx="22" cy="22" r="3" fill="currentColor" />
                 </svg>
               </div>
               <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 md:-bottom-4 md:-right-4">
-                <svg width="24" height="24" viewBox="0 0 32 32" className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8">
-                  <path d="M 16,4 Q 22,4 22,16 Q 22,28 16,28 Q 19,28 19,16 Q 19,4 16,4 Z" fill="currentColor" />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 32 32"
+                  className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8"
+                >
+                  <path
+                    d="M 16,4 Q 22,4 22,16 Q 22,28 16,28 Q 19,28 19,16 Q 19,4 16,4 Z"
+                    fill="currentColor"
+                  />
                   <circle cx="10" cy="22" r="3" fill="currentColor" />
                 </svg>
               </div>
@@ -1018,12 +1738,24 @@ export default function Index() {
                 <div className="absolute inset-0 bg-[#f5c422] transform group-hover:scale-105 transition-transform duration-300"></div>
                 <div className="relative bg-[#15122e] m-1 sm:m-2 px-6 sm:px-10 md:px-16 py-4 sm:py-6 md:py-7 font-display font-black text-lg sm:text-2xl md:text-3xl text-[#f5c422] uppercase tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300">
                   <span className="inline-flex items-center gap-2 sm:gap-3 md:gap-4">
-                    <svg width="20" height="20" viewBox="0 0 28 28" fill="currentColor" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 28 28"
+                      fill="currentColor"
+                      className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+                    >
                       <path d="M 14,2 Q 9,2 9,14 Q 9,26 14,26 Q 11,26 11,14 Q 11,2 14,2 Z" />
                       <circle cx="20" cy="8" r="3" />
                     </svg>
                     Register Now
-                    <svg width="20" height="20" viewBox="0 0 28 28" fill="currentColor" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 28 28"
+                      fill="currentColor"
+                      className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+                    >
                       <path d="M 14,2 Q 19,2 19,14 Q 19,26 14,26 Q 17,26 17,14 Q 17,2 14,2 Z" />
                       <circle cx="8" cy="8" r="3" />
                     </svg>
@@ -1039,8 +1771,16 @@ export default function Index() {
           {[...Array(12)].map((_, i) => (
             <div key={i}>
               {i % 3 === 0 ? (
-                <svg width="16" height="16" viewBox="0 0 20 20" className="text-[#388697] opacity-30 sm:w-5 sm:h-5">
-                  <path d="M 10,2 Q 14,2 14,10 Q 14,18 10,18 Q 12,18 12,10 Q 12,2 10,2 Z" fill="currentColor" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 20 20"
+                  className="text-[#388697] opacity-30 sm:w-5 sm:h-5"
+                >
+                  <path
+                    d="M 10,2 Q 14,2 14,10 Q 14,18 10,18 Q 12,18 12,10 Q 12,2 10,2 Z"
+                    fill="currentColor"
+                  />
                   <circle cx="6" cy="6" r="1.5" fill="currentColor" />
                 </svg>
               ) : (
@@ -1053,15 +1793,31 @@ export default function Index() {
         {/* Large Ornate Background Text - Hidden on mobile */}
         <div className="absolute bottom-10 left-0 right-0 overflow-hidden opacity-5 pointer-events-none select-none hidden md:block">
           <div className="flex items-center justify-center gap-12">
-            <svg width="80" height="80" viewBox="0 0 80 80" className="text-white">
-              <path d="M 40,8 Q 28,8 28,40 Q 28,72 40,72 Q 34,72 34,40 Q 34,8 40,8 Z" fill="currentColor" />
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              className="text-white"
+            >
+              <path
+                d="M 40,8 Q 28,8 28,40 Q 28,72 40,72 Q 34,72 34,40 Q 34,8 40,8 Z"
+                fill="currentColor"
+              />
               <circle cx="56" cy="22" r="8" fill="currentColor" />
             </svg>
             <p className="font-display text-[8rem] font-black text-white">
               VAKRUTA
             </p>
-            <svg width="80" height="80" viewBox="0 0 80 80" className="text-white">
-              <path d="M 40,8 Q 52,8 52,40 Q 52,72 40,72 Q 46,72 46,40 Q 46,8 40,8 Z" fill="currentColor" />
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              className="text-white"
+            >
+              <path
+                d="M 40,8 Q 52,8 52,40 Q 52,72 40,72 Q 46,72 46,40 Q 46,8 40,8 Z"
+                fill="currentColor"
+              />
               <circle cx="24" cy="22" r="8" fill="currentColor" />
             </svg>
           </div>
