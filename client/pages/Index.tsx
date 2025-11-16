@@ -480,7 +480,7 @@ export default function Index() {
                 </div>
 
                 {/* Islamic Geometric Stats with Star Patterns */}
-                <div className="grid grid-cols-3 gap-6 mt-12">
+                <div className="grid grid-cols-3 gap-6 mt-12 whitespace-nowrap">
                   {[
                     { num: "100+", label: "Debaters", color: "#f5c422" },
                     { num: "20+", label: "Rounds", color: "#388697" },
