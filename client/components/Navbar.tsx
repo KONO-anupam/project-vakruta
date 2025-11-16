@@ -7,7 +7,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#000000] border-b-2 border-[#e8dcc8] shadow-md">
+    <nav className="sticky top-0 z-50 bg-[#ffffff] border-b-2 border-[#e8dcc8] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-3 group">
