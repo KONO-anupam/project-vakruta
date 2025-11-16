@@ -168,17 +168,17 @@ export default function Index() {
               </p>
 
               <div className="grid grid-cols-3 gap-4 mt-8">
-                <div className="bg-blue-50 rounded-lg p-4 text-center border-l-4 border-blue-600">
-                  <p className="font-display text-2xl font-bold text-blue-900">1000+</p>
-                  <p className="font-cinzel text-sm text-blue-800">Members</p>
+                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697]">
+                  <p className="font-display text-2xl font-bold text-[#15122e]">1000+</p>
+                  <p className="font-cinzel text-sm text-[#388697]">Members</p>
                 </div>
-                <div className="bg-blue-50 rounded-lg p-4 text-center border-l-4 border-blue-600">
-                  <p className="font-display text-2xl font-bold text-blue-900">50+</p>
-                  <p className="font-cinzel text-sm text-blue-800">Events</p>
+                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697]">
+                  <p className="font-display text-2xl font-bold text-[#15122e]">50+</p>
+                  <p className="font-cinzel text-sm text-[#388697]">Events</p>
                 </div>
-                <div className="bg-blue-50 rounded-lg p-4 text-center border-l-4 border-blue-600">
-                  <p className="font-display text-2xl font-bold text-blue-900">25</p>
-                  <p className="font-cinzel text-sm text-blue-800">Years</p>
+                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697]">
+                  <p className="font-display text-2xl font-bold text-[#15122e]">25</p>
+                  <p className="font-cinzel text-sm text-[#388697]">Years</p>
                 </div>
               </div>
             </div>
