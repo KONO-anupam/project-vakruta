@@ -218,7 +218,7 @@ export default function Index() {
       <Navbar />
 
       {/* Hero Section with Grid Background */}
-      <section id="hero" className="relative overflow-hidden pt-5 pb-20 md:py-32">
+      <section id="hero" className="relative overflow-hidden pt-0 pb-20 md:py-32">
         <GridBackground className="absolute inset-0" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Left Content */}
