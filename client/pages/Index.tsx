@@ -2,8 +2,8 @@ import { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-// Grid Background Component
-const GridBackground = ({
+// Diagonal Lines Background
+const DiagonalBackground = ({
   children,
   className = "",
 }: {
@@ -13,14 +13,23 @@ const GridBackground = ({
   return (
     <div className={`relative ${className}`}>
       <div
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-10"
         style={{
-          backgroundSize: "50px 50px",
-          backgroundImage:
-            "linear-gradient(to right, rgba(56, 134, 151, 0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(56, 134, 151, 0.15) 1px, transparent 1px)",
+          backgroundImage: `repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 35px,
+            rgba(56, 134, 151, 0.3) 35px,
+            rgba(56, 134, 151, 0.3) 37px
+          ), repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 35px,
+            rgba(245, 196, 34, 0.2) 35px,
+            rgba(245, 196, 34, 0.2) 37px
+          )`,
         }}
       />
-      <div className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent)]"></div>
       {children}
     </div>
   );
@@ -40,7 +49,6 @@ export default function Index() {
   const ctaSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    // Simplified hero animations with gentle fade-in
     const heroTimeline = () => {
       if (
         !heroHeadingRef.current ||
@@ -49,7 +57,6 @@ export default function Index() {
       )
         return;
 
-      // Heading - simple fade in
       setTimeout(() => {
         if (heroHeadingRef.current) {
           heroHeadingRef.current.style.transition = "all 0.8s ease-out";
@@ -58,7 +65,6 @@ export default function Index() {
         }
       }, 100);
 
-      // Paragraph fade in
       setTimeout(() => {
         if (heroParagraphRef.current) {
           heroParagraphRef.current.style.transition = "all 0.8s ease-out";
@@ -67,7 +73,6 @@ export default function Index() {
         }
       }, 300);
 
-      // Image fade in
       setTimeout(() => {
         if (heroImageRef.current) {
           heroImageRef.current.style.transition = "all 0.8s ease-out";
@@ -79,13 +84,11 @@ export default function Index() {
 
     heroTimeline();
 
-    // Scroll-triggered animations with subtle effects
     const observerOptions = {
       threshold: 0.15,
       rootMargin: "0px",
     };
 
-    // About section animation
     const aboutObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -116,7 +119,6 @@ export default function Index() {
 
     if (aboutHeadingRef.current) aboutObserver.observe(aboutHeadingRef.current);
 
-    // Stats cards gentle animation
     const statsObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && statsCardsRef.current) {
@@ -134,7 +136,6 @@ export default function Index() {
 
     if (statsCardsRef.current) statsObserver.observe(statsCardsRef.current);
 
-    // Brochure section animation
     const brochureObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -166,7 +167,6 @@ export default function Index() {
     if (brochureHeadingRef.current)
       brochureObserver.observe(brochureHeadingRef.current);
 
-    // CTA section
     const ctaObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && ctaSectionRef.current) {
@@ -192,112 +192,141 @@ export default function Index() {
     <div className="min-h-screen bg-[#f3e8dc]">
       <Navbar />
 
-      {/* Hero Section with Grid Background */}
-      <section id="hero" className="relative overflow-hidden pt-0 pb-20 md:py-32">
-        <GridBackground className="absolute inset-0" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Left Content */}
-          <div className="flex-1 z-10">
-            <h1
-              ref={heroHeadingRef}
-              className="font-display text-5xl md:text-7xl font-bold text-[#f5c422] mb-6 leading-tight whitespace-nowrap opacity-0 transform translate-y-8"
-            >
-              Welcome to Vakruta
-            </h1>
-            <p
-              ref={heroParagraphRef}
-              className="font-cinzel text-lg md:text-xl text-[#15122e] mb-8 leading-relaxed max-w-lg opacity-0 transform translate-y-8"
-            >
-              NIT Rourkela's premier Asian Parliamentary Debate tournament. Join the finest debaters from across the nation for an intellectual showdown celebrating the art of argumentation and oratory excellence.
-            </p>
-            <div className="flex gap-4">
-              <button className="bg-[#15122e] hover:bg-[#0f0c20] text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:translate-y-[-2px]">
-                Sponsor Us
-              </button>
-            </div>
-          </div>
+      {/* Hero Section - Asymmetric Magazine Layout */}
+      <section id="hero" className="relative overflow-hidden pt-20 pb-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-12 gap-0 min-h-[85vh]">
+            {/* Large Typographic Statement */}
+            <div className="col-span-12 md:col-span-7 flex flex-col justify-center pr-0 md:pr-12 relative z-10">
+              <div className="border-l-8 border-[#f5c422] pl-8 mb-8">
+                <span className="font-cinzel text-sm uppercase tracking-[0.3em] text-[#388697] block mb-4">
+                  NIT Rourkela Presents
+                </span>
+                <h1
+                  ref={heroHeadingRef}
+                  className="font-display text-7xl md:text-8xl lg:text-9xl font-black text-[#15122e] leading-[0.9] mb-0 opacity-0 transform translate-y-8"
+                  style={{ letterSpacing: '-0.02em' }}
+                >
+                  VAK<span className="text-[#f5c422]">RU</span>TA
+                </h1>
+              </div>
 
-          {/* Right Visual Element */}
-          <div
-            ref={heroImageRef}
-            className="flex-1 relative opacity-0 transform translate-y-8"
-          >
-            <div className="relative w-full h-96 md:h-full flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-amber-400/20 rounded-3xl blur-3xl"></div>
-              <div className="relative bg-white rounded-3xl p-8 border-2 border-blue-900/10 shadow-2xl hover:shadow-3xl transition-shadow duration-500">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F981caa52e21948b987df073157a54df3?format=webp&width=800"
-                  alt="Vakruta Pattern"
-                  className="w-full h-auto max-h-80 object-contain"
-                />
+              <p
+                ref={heroParagraphRef}
+                className="font-cinzel text-xl md:text-2xl text-[#15122e] leading-relaxed max-w-xl opacity-0 transform translate-y-8 border-t-2 border-[#388697] pt-6"
+              >
+                Where articulation meets intellect. Asia's parliamentary debate format comes alive in India's premier technical institute.
+              </p>
+
+              <div className="flex gap-4 mt-12">
+                <button className="bg-[#15122e] text-[#f5c422] font-cinzel font-bold px-10 py-4 transition-all duration-300 hover:bg-[#f5c422] hover:text-[#15122e] border-2 border-[#15122e]">
+                  SPONSOR US →
+                </button>
+              </div>
+            </div>
+
+            {/* Image Column with Overlap */}
+            <div
+              ref={heroImageRef}
+              className="col-span-12 md:col-span-5 relative mt-12 md:mt-0 opacity-0 transform translate-y-8"
+            >
+              <div className="relative h-[500px] md:h-full">
+                <div className="absolute top-0 right-0 w-[120%] md:w-full h-full">
+                  <div className="relative h-full border-8 border-[#388697]">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F981caa52e21948b987df073157a54df3?format=webp&width=800"
+                      alt="Vakruta Pattern"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 left-0 bg-[#f5c422] text-[#15122e] p-6 transform -translate-x-8 translate-y-8">
+                      <p className="font-display text-3xl font-bold">2025</p>
+                      <p className="font-cinzel text-sm uppercase tracking-wider">Tournament</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Subtle Decorative Elements */}
-        <div className="absolute top-10 right-10 w-32 h-32 border-2 border-[#f5c422]/20 rounded-full opacity-20"></div>
-        <div className="absolute bottom-20 left-5 w-24 h-24 border border-[#8EC4D9]/20 rounded-lg opacity-20 transform rotate-45"></div>
+        {/* Large Background Number */}
+        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 opacity-5 pointer-events-none select-none">
+          <p className="font-display text-[20rem] font-black text-[#15122e]">25</p>
+        </div>
       </section>
 
-      {/* About Us Section */}
+      {/* About Us Section - Split Screen Editorial */}
       <section
         id="about"
-        className="py-20 md:py-32 bg-[#f3e8dc] border-t border-[#e8dcc8]"
+        className="py-24 md:py-32 bg-[#15122e] relative overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2
-              ref={aboutHeadingRef}
-              className="font-display text-5xl md:text-6xl font-bold text-[#f5c422] mb-4 opacity-0 transform translate-y-8"
-            >
-              About Vakruta
-            </h2>
-            <div className="w-100 h-0.5 bg-gradient-to-r from-transparent via-[#f5c422] to-transparent mx-auto"></div>
-          </div>
+        <DiagonalBackground className="absolute inset-0" />
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-12 gap-12 items-stretch">
+            {/* Left: Image with stats overlay */}
             <div
               ref={aboutImageRef}
-              className="bg-[#faf7f4] rounded-2xl p-8 border border-[#e8dcc8] shadow-md opacity-0 transform translate-y-8 hover:shadow-lg transition-shadow duration-300"
+              className="col-span-12 md:col-span-5 opacity-0 transform translate-y-8"
             >
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F14012f80d4794515a0272d68adccc272?format=webp&width=500"
-                alt="Indian Architecture"
-                className="w-full h-96 object-cover rounded-lg"
-              />
+              <div className="relative h-full min-h-[500px]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F14012f80d4794515a0272d68adccc272?format=webp&width=500"
+                  alt="Indian Architecture"
+                  className="w-full h-full object-cover brightness-90"
+                />
+
+                {/* Floating Stats Cards */}
+                <div className="absolute -right-6 top-12 bg-[#f5c422] p-6 shadow-2xl">
+                  <p className="font-display text-5xl font-black text-[#15122e]">100+</p>
+                  <p className="font-cinzel text-xs uppercase tracking-widest text-[#15122e] mt-1">Debaters</p>
+                </div>
+
+                <div className="absolute -right-6 bottom-24 bg-[#388697] p-6 shadow-2xl">
+                  <p className="font-display text-5xl font-black text-white">20+</p>
+                  <p className="font-cinzel text-xs uppercase tracking-widest text-white mt-1">Rounds</p>
+                </div>
+
+                <div className="absolute -left-6 bottom-12 bg-[#f3e8dc] p-6 shadow-2xl">
+                  <p className="font-display text-5xl font-black text-[#15122e]">3</p>
+                  <p className="font-cinzel text-xs uppercase tracking-widest text-[#15122e] mt-1">Days</p>
+                </div>
+              </div>
             </div>
 
-            <div
-              ref={aboutTextRef}
-              className="space-y-6 opacity-0 transform translate-y-8"
-            >
-              <p className="font-cinzel text-lg text-[#15122e] leading-relaxed">
-                Vakruta is NIT Rourkela's flagship Asian Parliamentary Debate tournament, bringing together the brightest minds from institutions across India. We provide a platform for intellectual discourse, critical thinking, and the art of persuasive argumentation.
-              </p>
+            {/* Right: Text Content */}
+            <div className="col-span-12 md:col-span-7 flex flex-col justify-center">
+              <div
+                ref={aboutHeadingRef}
+                className="mb-12 opacity-0 transform translate-y-8"
+              >
+                <span className="font-cinzel text-xs uppercase tracking-[0.4em] text-[#f5c422] block mb-4">
+                  About the Tournament
+                </span>
+                <h2 className="font-display text-6xl md:text-7xl font-black text-[#f5c422] leading-tight">
+                  The Art of<br />Argument
+                </h2>
+                <div className="w-32 h-2 bg-[#388697] mt-4"></div>
+              </div>
 
-              <p className="font-cinzel text-lg text-[#15122e] leading-relaxed">
-                Through rigorous debate rounds, engaging workshops, and competitive spirit, Vakruta cultivates eloquence, analytical thinking, and the ability to articulate complex ideas with clarity and conviction.
-              </p>
+              <div
+                ref={aboutTextRef}
+                className="space-y-6 opacity-0 transform translate-y-8"
+              >
+                <p className="font-cinzel text-lg text-[#f3e8dc] leading-relaxed border-l-4 border-[#388697] pl-6">
+                  Vakruta is NIT Rourkela's flagship Asian Parliamentary Debate tournament, bringing together the brightest minds from institutions across India.
+                </p>
 
-              <div className="grid grid-cols-3 gap-4 mt-8">
-                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:shadow-md transition-shadow duration-300">
-                  <p className="font-display text-2xl font-bold text-[#15122e]">
-                    100+
-                  </p>
-                  <p className="font-cinzel text-sm text-[#388697]">Debaters</p>
-                </div>
-                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:shadow-md transition-shadow duration-300">
-                  <p className="font-display text-2xl font-bold text-[#15122e]">
-                    20+
-                  </p>
-                  <p className="font-cinzel text-sm text-[#388697]">Rounds</p>
-                </div>
-                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:shadow-md transition-shadow duration-300">
-                  <p className="font-display text-2xl font-bold text-[#15122e]">
-                    3
-                  </p>
-                  <p className="font-cinzel text-sm text-[#388697]">Days</p>
+                <p className="font-cinzel text-lg text-[#f3e8dc] leading-relaxed border-l-4 border-[#f5c422] pl-6">
+                  Through rigorous debate rounds, engaging workshops, and competitive spirit, Vakruta cultivates eloquence, analytical thinking, and the ability to articulate complex ideas with clarity and conviction.
+                </p>
+
+                <div className="pt-6">
+                  <div className="inline-block bg-[#f5c422] text-[#15122e] px-8 py-3">
+                    <p className="font-display text-sm font-bold uppercase tracking-wider">
+                      Est. Tournament Format → Asian Parliamentary
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -305,25 +334,29 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Past Statistics Section */}
+      {/* Statistics Section - Magazine Spread */}
       <section
         id="statistics"
-        className="py-20 md:py-32 bg-[#f3e8dc] border-t border-[#e8dcc8]"
+        className="py-24 md:py-32 bg-[#f3e8dc] relative"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-5xl md:text-6xl font-bold text-[#f5c422] mb-4">
-              Our Legacy
+          {/* Title Block */}
+          <div className="mb-20">
+            <div className="flex items-center gap-8 mb-4">
+              <div className="w-16 h-1 bg-[#15122e]"></div>
+              <span className="font-cinzel text-xs uppercase tracking-[0.4em] text-[#388697]">
+                Our Legacy
+              </span>
+            </div>
+            <h2 className="font-display text-7xl md:text-8xl font-black text-[#15122e] leading-none">
+              BY THE<br />NUMBERS
             </h2>
-            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#f5c422] to-transparent mx-auto mb-4"></div>
-            <p className="font-cinzel text-xl text-[#15122e]">
-              Experience World-Class Parliamentary Debate
-            </p>
           </div>
 
+          {/* Stats Cards - Asymmetric Grid */}
           <div
             ref={statsCardsRef}
-            className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-3xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 gap-0"
           >
             {[
               {
@@ -332,6 +365,7 @@ export default function Index() {
                 value: "2,847",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F4324065880c44c3789e791aabb29ea65?format=webp&width=600",
+                accent: "#f5c422",
               },
               {
                 year: "2025",
@@ -339,27 +373,42 @@ export default function Index() {
                 value: "₹1.8 Cr",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F1028d674e84843efbbe3ef684c03bbd2?format=webp&width=600",
+                accent: "#388697",
               },
             ].map((stat, idx) => (
               <div
                 key={idx}
                 className="relative group opacity-0 transform translate-y-8"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/5 to-[#f5c422]/5 rounded-2xl group-hover:from-[#388697]/10 group-hover:to-[#f5c422]/10 transition-all duration-300"></div>
-                <div className="relative bg-[#faf7f4] rounded-2xl border border-[#e8dcc8] shadow-md group-hover:shadow-xl transition-all duration-300 p-8">
+                <div className="relative h-[600px] overflow-hidden">
                   <img
                     src={stat.image}
                     alt={stat.label}
-                    className="w-full h-56 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
-                  <div className="mt-6">
-                    <p className="font-cinzel text-sm text-[#388697] uppercase tracking-wider">
-                      {stat.year} - {stat.label}
-                    </p>
-                    <p className="font-display text-3xl font-bold text-[#f5c422] mt-3">
-                      {stat.value}
-                    </p>
+
+                  {/* Overlay Content */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#15122e] via-[#15122e]/50 to-transparent opacity-90"></div>
+
+                  <div className="absolute bottom-0 left-0 right-0 p-12">
+                    <div className="flex items-end justify-between">
+                      <div>
+                        <p className="font-cinzel text-xs uppercase tracking-[0.3em] text-[#f3e8dc] mb-2">
+                          {stat.year} — {stat.label}
+                        </p>
+                        <p className="font-display text-7xl font-black" style={{ color: stat.accent }}>
+                          {stat.value}
+                        </p>
+                      </div>
+                      <div className="w-16 h-16 border-4 mb-4" style={{ borderColor: stat.accent }}></div>
+                    </div>
                   </div>
+
+                  {/* Corner Accent */}
+                  <div
+                    className="absolute top-0 right-0 w-24 h-24 transform translate-x-12 -translate-y-12 rotate-45"
+                    style={{ backgroundColor: stat.accent }}
+                  ></div>
                 </div>
               </div>
             ))}
@@ -367,117 +416,134 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Brochure Section */}
+      {/* Brochure Section - Editorial Layout */}
       <section
         id="brochure"
-        className="py-20 md:py-32 bg-[#f3e8dc] border-t border-[#e8dcc8]"
+        className="py-24 md:py-32 bg-[#388697] relative overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center text-center mb-16">
-            <h2
-              ref={brochureHeadingRef}
-              className="font-display text-5xl md:text-6xl font-bold text-[#f5c422] mb-4 opacity-0 transform translate-y-8"
-            >
-              Tournament Brochure
-            </h2>
-            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#f5c422] to-transparent mx-auto mb-6"></div>
-            <p className="font-cinzel text-lg text-[#15122e] max-w-2xl">
-              Download our comprehensive tournament brochure featuring complete details about Vakruta's debate format, schedule, rules, and registration information.
-            </p>
-          </div>
+        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
+          <div className="w-full h-full" style={{
+            backgroundImage: `repeating-linear-gradient(
+              0deg,
+              transparent,
+              transparent 20px,
+              #15122e 20px,
+              #15122e 21px
+            )`
+          }}></div>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Brochure Image */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-12 gap-12 items-center">
+            {/* Left - Image */}
             <div
               ref={brochureLeftRef}
-              className="flex justify-center opacity-0 transform translate-y-8"
+              className="col-span-12 md:col-span-4 opacity-0 transform translate-y-8"
             >
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8EC4D9]/15 to-[#f5c422]/15 rounded-3xl blur-2xl transition-all duration-500"></div>
-                <div className="relative bg-[#faf7f4] rounded-3xl overflow-hidden shadow-lg border-2 border-[#f5c422] group-hover:shadow-xl transition-all duration-300">
-                  <div className="relative w-80 h-80 overflow-hidden">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2Fa3b9abeeff424a8d82fadf2d789e4d7a?format=webp&width=600"
-                      alt="Brochure Pattern"
-                      className="w-full h-full object-cover mx-auto transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/0 to-[#f5c422]/0 group-hover:from-[#388697]/5 group-hover:to-[#f5c422]/5 transition-all duration-300"></div>
-                  </div>
+              <div className="relative">
+                <div className="absolute -inset-6 bg-[#f5c422] -z-10 transform rotate-3"></div>
+                <div className="relative bg-white p-2">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2Fa3b9abeeff424a8d82fadf2d789e4d7a?format=webp&width=600"
+                    alt="Brochure"
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
 
-            {/* Right - Brochure Info */}
-            <div
-              ref={brochureRightRef}
-              className="space-y-6 opacity-0 transform translate-y-8"
-            >
-              <div className="bg-[#e8f3f7] rounded-2xl p-8 border border-[#8EC4D9] hover:shadow-lg transition-shadow duration-300">
-                <h3 className="font-display text-2xl font-bold text-[#f5c422] mb-4">
-                  What's Inside
-                </h3>
-                <ul className="space-y-4 font-cinzel text-[#15122e]">
-                  {[
-                    "Tournament Format & Asian Parliamentary Rules",
-                    "Detailed Schedule & Round Breakdowns",
-                    "Registration Process & Eligibility Criteria",
-                    "Prize Pool & Recognition Categories",
-                    "Adjudication Standards & Judging Process",
-                  ].map((item, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 group hover:translate-x-1 transition-transform duration-200"
-                    >
-                      <span className="text-[#f5c422] font-bold text-xl">
-                        ✦
-                      </span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+            {/* Right - Content */}
+            <div className="col-span-12 md:col-span-8">
+              <div
+                ref={brochureHeadingRef}
+                className="mb-12 opacity-0 transform translate-y-8"
+              >
+                <h2 className="font-display text-7xl md:text-8xl font-black text-white leading-none mb-6">
+                  COMPLETE<br />GUIDE
+                </h2>
+                <div className="w-40 h-2 bg-[#f5c422]"></div>
               </div>
 
-              <button className="w-full bg-[#15122e] hover:bg-[#0f0c20] text-white font-display text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-2px]">
-                Download Brochure
-              </button>
+              <div
+                ref={brochureRightRef}
+                className="opacity-0 transform translate-y-8"
+              >
+                <div className="bg-[#15122e] p-8 mb-6">
+                  <p className="font-cinzel text-lg text-[#f3e8dc] leading-relaxed mb-6">
+                    Download our comprehensive tournament brochure featuring complete details about Vakruta's debate format, schedule, rules, and registration information.
+                  </p>
+
+                  <div className="grid grid-cols-1 gap-3">
+                    {[
+                      "Tournament Format & Asian Parliamentary Rules",
+                      "Detailed Schedule & Round Breakdowns",
+                      "Registration Process & Eligibility Criteria",
+                      "Prize Pool & Recognition Categories",
+                      "Adjudication Standards & Judging Process",
+                    ].map((item, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-4 group"
+                      >
+                        <div className="w-2 h-2 bg-[#f5c422] group-hover:w-8 transition-all duration-300"></div>
+                        <span className="font-cinzel text-sm text-[#f3e8dc]">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <button className="w-full bg-[#f5c422] text-[#15122e] font-display text-lg font-black py-5 px-8 hover:bg-white transition-all duration-300 uppercase tracking-wider">
+                  Download Brochure →
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gradient CTA Section with Grid Background */}
+      {/* CTA Section - Bold Statement */}
       <section
         ref={ctaSectionRef}
-        className="relative py-20 md:py-32 overflow-hidden opacity-0 transform translate-y-8"
+        className="relative py-32 md:py-48 bg-[#15122e] overflow-hidden opacity-0 transform translate-y-8"
       >
-        <GridBackground className="absolute inset-0 bg-gradient-to-b from-[#f3e8dc] via-[#f3e8dc] to-[#e8dcc8]" />
-
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 opacity-20">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F7bd6f9d19eb849b583b1cfc21fd88993?format=webp&width=1400"
-            alt="Gradient Background"
-            className="w-full h-full object-cover opacity-30"
+            alt="Background"
+            className="w-full h-full object-cover"
           />
         </div>
 
-        {/* Enhanced gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f3e8dc]/90 via-[#f3e8dc]/40 to-transparent"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="mb-12">
+              <span className="font-cinzel text-xs uppercase tracking-[0.5em] text-[#388697] block mb-8">
+                Be Part of History
+              </span>
+              <h2 className="font-display text-7xl md:text-9xl font-black text-[#f5c422] leading-none mb-6">
+                VAKRUTA<br />2025
+              </h2>
+              <div className="flex justify-center gap-4 mb-8">
+                <div className="w-32 h-1 bg-[#388697]"></div>
+                <div className="w-32 h-1 bg-[#f5c422]"></div>
+              </div>
+            </div>
 
-        {/* Subtle decorative elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#8EC4D9]/20 to-transparent rounded-full blur-3xl -ml-48 -mt-48"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#f5c422]/15 to-transparent rounded-full blur-3xl -mr-48 -mb-48"></div>
+            <p className="font-cinzel text-xl md:text-2xl text-[#f3e8dc] max-w-3xl mx-auto mb-16 leading-relaxed">
+              Step onto the stage at NIT Rourkela's premier debate tournament. Challenge your intellect, sharpen your arguments, and compete with the nation's finest debaters.
+            </p>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-[#f5c422] mb-4 leading-tight">
-            Join Vakruta 2025
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#f5c422] to-transparent mx-auto mb-6"></div>
-          <p className="font-cinzel text-lg md:text-xl text-[#15122e] max-w-3xl mx-auto mb-12 leading-relaxed">
-            Step onto the stage at NIT Rourkela's premier debate tournament. Challenge your intellect, sharpen your arguments, and compete with the nation's finest debaters in the Asian Parliamentary format.
+            <button className="inline-block bg-[#f5c422] text-[#15122e] font-display font-black text-xl px-16 py-6 hover:bg-white transition-all duration-300 uppercase tracking-wider border-4 border-[#f5c422] hover:border-white">
+              Register Now →
+            </button>
+          </div>
+        </div>
+
+        {/* Large Background Text */}
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden opacity-5 pointer-events-none select-none">
+          <p className="font-display text-[15rem] font-black text-white text-center whitespace-nowrap">
+            DEBATE · ARGUE · WIN
           </p>
-          <button className="bg-gradient-to-r from-[#f5c422] to-[#d4a913] hover:from-[#d4a913] hover:to-[#b39409] text-[#15122e] font-display font-bold text-lg px-12 py-4 rounded-xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:translate-y-[-3px]">
-            Register for Tournament
-          </button>
         </div>
       </section>
 
