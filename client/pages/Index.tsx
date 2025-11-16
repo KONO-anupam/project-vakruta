@@ -230,7 +230,7 @@ export default function Index() {
             >
               Discover Our Brochure
             </h2>
-            <p className="font-cinzel text-lg text-blue-800 max-w-2xl">
+            <p className="font-cinzel text-lg text-[#15122e] max-w-2xl">
               Explore the complete story of Vakruta through our comprehensive brochure,
               featuring detailed information about our heritage, achievements, and vision.
             </p>
@@ -240,8 +240,8 @@ export default function Index() {
             {/* Left - Logo Showcase */}
             <div className="flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/15 to-amber-400/15 rounded-3xl blur-2xl"></div>
-                <div className="relative bg-white rounded-3xl p-12 shadow-lg border-2 border-amber-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8EC4D9]/15 to-[#f5c422]/15 rounded-3xl blur-2xl"></div>
+                <div className="relative bg-[#faf7f4] rounded-3xl p-12 shadow-lg border-2 border-[#f5c422]">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F2b1a5895495e4fb98781781147a0dfc0?format=webp&width=600"
                     alt="Vakruta Logo"
