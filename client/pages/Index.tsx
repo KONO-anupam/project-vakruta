@@ -88,15 +88,15 @@ export default function Index() {
           <div className="flex-1 z-10">
             <h1
               ref={heroHeadingRef}
-              className="font-display text-5xl md:text-7xl font-bold text-blue-900 mb-6 leading-tight"
+              className="font-display text-5xl md:text-7xl font-bold text-[#f5c422] mb-6 leading-tight"
             >
               Welcome to
               <br />
-              <span className="text-amber-600">Vakruta</span>
+              <span className="text-[#f5c422]">Vakruta</span>
             </h1>
             <p
               ref={heroParagraphRef}
-              className="font-cinzel text-lg md:text-xl text-blue-800 mb-8 leading-relaxed max-w-lg"
+              className="font-cinzel text-lg md:text-xl text-[#15122e] mb-8 leading-relaxed max-w-lg"
             >
               Discover the magnificence of Indian heritage through a celebration of tradition,
               innovation, and timeless elegance inspired by the grandeur of the Mughal Empire.
