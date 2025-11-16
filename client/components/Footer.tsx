@@ -17,7 +17,7 @@ export default function Footer() {
             </h3>
             <p className="text-[#d1e8f1] font-cinzel text-sm leading-relaxed">
               Inspired by the grandeur of Mughal architecture and timeless
-              Indian traditions, Vakruta brings together innovation and
+              Indian traditions, Vakruta brings together Debating and
               heritage.
             </p>
           </div>
