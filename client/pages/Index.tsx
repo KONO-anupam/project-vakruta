@@ -316,15 +316,7 @@ export default function Index() {
               </div>
 
               {/* Geometric arabesque divider */}
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
-                <svg width="60" height="24" viewBox="0 0 60 24" className="text-[#388697]">
-                  <path d="M 0,12 Q 15,4 30,12 T 60,12" fill="none" stroke="currentColor" strokeWidth="2" />
-                  <path d="M 0,12 Q 15,20 30,12 T 60,12" fill="none" stroke="#f5c422" strokeWidth="1.5" />
-                  <circle cx="15" cy="12" r="2" fill="#f5c422" />
-                  <circle cx="30" cy="12" r="2.5" fill="#388697" />
-                  <circle cx="45" cy="12" r="2" fill="#f5c422" />
-                </svg>
-              </div>
+             
 
               <p
                 ref={heroParagraphRef}
