@@ -26,8 +26,6 @@ const GridBackground = ({
   );
 };
 
-
-
 export default function Index() {
   const heroHeadingRef = useRef<HTMLHeadingElement>(null);
   const heroParagraphRef = useRef<HTMLParagraphElement>(null);
@@ -42,7 +40,7 @@ export default function Index() {
   const ctaSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    // Enhanced hero animations with staggered reveal
+    // Simplified hero animations with gentle fade-in
     const heroTimeline = () => {
       if (
         !heroHeadingRef.current ||
@@ -51,54 +49,39 @@ export default function Index() {
       )
         return;
 
-      // Heading animation - letter by letter reveal
-      const heading = heroHeadingRef.current;
-      const text = heading.textContent || "";
-      heading.innerHTML = text
-        .split("")
-        .map((char) =>
-          char === " "
-            ? " "
-            : `<span style="display:inline-block;opacity:0;transform:translateY(20px)">${char}</span>`,
-        )
-        .join("");
+      // Heading - simple fade in
+      setTimeout(() => {
+        if (heroHeadingRef.current) {
+          heroHeadingRef.current.style.transition = "all 0.8s ease-out";
+          heroHeadingRef.current.style.opacity = "1";
+          heroHeadingRef.current.style.transform = "translateY(0)";
+        }
+      }, 100);
 
-      const chars = heading.querySelectorAll("span");
-      chars.forEach((char, i) => {
-        setTimeout(() => {
-          (char as HTMLElement).style.transition =
-            "all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)";
-          (char as HTMLElement).style.opacity = "1";
-          (char as HTMLElement).style.transform = "translateY(0)";
-        }, i * 30);
-      });
-
-      // Paragraph slide in from left
+      // Paragraph fade in
       setTimeout(() => {
         if (heroParagraphRef.current) {
-          heroParagraphRef.current.style.transition =
-            "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+          heroParagraphRef.current.style.transition = "all 0.8s ease-out";
           heroParagraphRef.current.style.opacity = "1";
-          heroParagraphRef.current.style.transform = "translateX(0)";
+          heroParagraphRef.current.style.transform = "translateY(0)";
         }
-      }, 400);
+      }, 300);
 
-      // Image morph in
+      // Image fade in
       setTimeout(() => {
         if (heroImageRef.current) {
-          heroImageRef.current.style.transition =
-            "all 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+          heroImageRef.current.style.transition = "all 0.8s ease-out";
           heroImageRef.current.style.opacity = "1";
-          heroImageRef.current.style.transform = "scale(1) rotate(0deg)";
+          heroImageRef.current.style.transform = "translateY(0)";
         }
-      }, 600);
+      }, 500);
     };
 
     heroTimeline();
 
-    // Scroll-triggered animations using Intersection Observer
+    // Scroll-triggered animations with subtle effects
     const observerOptions = {
-      threshold: 0.2,
+      threshold: 0.15,
       rootMargin: "0px",
     };
 
@@ -107,18 +90,16 @@ export default function Index() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (aboutHeadingRef.current) {
-            aboutHeadingRef.current.style.transition =
-              "all 1s cubic-bezier(0.34, 1.56, 0.64, 1)";
+            aboutHeadingRef.current.style.transition = "all 0.8s ease-out";
             aboutHeadingRef.current.style.opacity = "1";
-            aboutHeadingRef.current.style.transform = "scale(1)";
+            aboutHeadingRef.current.style.transform = "translateY(0)";
           }
 
           setTimeout(() => {
             if (aboutImageRef.current) {
               aboutImageRef.current.style.transition = "all 0.8s ease-out";
               aboutImageRef.current.style.opacity = "1";
-              aboutImageRef.current.style.transform =
-                "translateX(0) rotate(0deg)";
+              aboutImageRef.current.style.transform = "translateY(0)";
             }
           }, 200);
 
@@ -126,28 +107,26 @@ export default function Index() {
             if (aboutTextRef.current) {
               aboutTextRef.current.style.transition = "all 0.8s ease-out";
               aboutTextRef.current.style.opacity = "1";
-              aboutTextRef.current.style.transform = "translateX(0)";
+              aboutTextRef.current.style.transform = "translateY(0)";
             }
-          }, 400);
+          }, 300);
         }
       });
     }, observerOptions);
 
     if (aboutHeadingRef.current) aboutObserver.observe(aboutHeadingRef.current);
 
-    // Stats cards cascading animation
+    // Stats cards gentle animation
     const statsObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && statsCardsRef.current) {
           const cards = statsCardsRef.current.children;
           Array.from(cards).forEach((card, i) => {
             setTimeout(() => {
-              (card as HTMLElement).style.transition =
-                "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)";
+              (card as HTMLElement).style.transition = "all 0.7s ease-out";
               (card as HTMLElement).style.opacity = "1";
-              (card as HTMLElement).style.transform =
-                "translateY(0) rotate(0deg)";
-            }, i * 150);
+              (card as HTMLElement).style.transform = "translateY(0)";
+            }, i * 100);
           });
         }
       });
@@ -155,7 +134,7 @@ export default function Index() {
 
     if (statsCardsRef.current) statsObserver.observe(statsCardsRef.current);
 
-    // Brochure section parallel animation
+    // Brochure section animation
     const brochureObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -167,21 +146,17 @@ export default function Index() {
 
           setTimeout(() => {
             if (brochureLeftRef.current) {
-              brochureLeftRef.current.style.transition =
-                "all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+              brochureLeftRef.current.style.transition = "all 0.8s ease-out";
               brochureLeftRef.current.style.opacity = "1";
-              brochureLeftRef.current.style.transform =
-                "translateX(0) scale(1)";
+              brochureLeftRef.current.style.transform = "translateY(0)";
             }
-          }, 300);
+          }, 200);
 
           setTimeout(() => {
             if (brochureRightRef.current) {
-              brochureRightRef.current.style.transition =
-                "all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+              brochureRightRef.current.style.transition = "all 0.8s ease-out";
               brochureRightRef.current.style.opacity = "1";
-              brochureRightRef.current.style.transform =
-                "translateX(0) scale(1)";
+              brochureRightRef.current.style.transform = "translateY(0)";
             }
           }, 300);
         }
@@ -191,14 +166,14 @@ export default function Index() {
     if (brochureHeadingRef.current)
       brochureObserver.observe(brochureHeadingRef.current);
 
-    // CTA section ripple effect
+    // CTA section
     const ctaObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && ctaSectionRef.current) {
           const section = ctaSectionRef.current;
-          section.style.transition = "all 1.5s ease-out";
+          section.style.transition = "all 1s ease-out";
           section.style.opacity = "1";
-          section.style.transform = "scale(1)";
+          section.style.transform = "translateY(0)";
         }
       });
     }, observerOptions);
@@ -225,18 +200,18 @@ export default function Index() {
           <div className="flex-1 z-10">
             <h1
               ref={heroHeadingRef}
-              className="font-display text-5xl md:text-7xl font-bold text-[#f5c422] mb-6 leading-tight whitespace-nowrap"
+              className="font-display text-5xl md:text-7xl font-bold text-[#f5c422] mb-6 leading-tight whitespace-nowrap opacity-0 transform translate-y-8"
             >
               Welcome to Vakruta
             </h1>
             <p
               ref={heroParagraphRef}
-              className="font-cinzel text-lg md:text-xl text-[#15122e] mb-8 leading-relaxed max-w-lg opacity-0 transform -translate-x-12"
+              className="font-cinzel text-lg md:text-xl text-[#15122e] mb-8 leading-relaxed max-w-lg opacity-0 transform translate-y-8"
             >
               NIT Rourkela's premier Asian Parliamentary Debate tournament. Join the finest debaters from across the nation for an intellectual showdown celebrating the art of argumentation and oratory excellence.
             </p>
             <div className="flex gap-4">
-              <button className="bg-[#15122e] hover:bg-[#0f0c20] text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+              <button className="bg-[#15122e] hover:bg-[#0f0c20] text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:translate-y-[-2px]">
                 Sponsor Us
               </button>
             </div>
@@ -245,10 +220,10 @@ export default function Index() {
           {/* Right Visual Element */}
           <div
             ref={heroImageRef}
-            className="flex-1 relative opacity-0 transform scale-75 rotate-12"
+            className="flex-1 relative opacity-0 transform translate-y-8"
           >
             <div className="relative w-full h-96 md:h-full flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-amber-400/20 rounded-3xl blur-3xl animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-amber-400/20 rounded-3xl blur-3xl"></div>
               <div className="relative bg-white rounded-3xl p-8 border-2 border-blue-900/10 shadow-2xl hover:shadow-3xl transition-shadow duration-500">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F981caa52e21948b987df073157a54df3?format=webp&width=800"
@@ -260,9 +235,9 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Enhanced Decorative Elements */}
-        <div className="absolute top-10 right-10 w-32 h-32 border-2 border-[#f5c422]/20 rounded-full opacity-40 animate-spin-slow"></div>
-        <div className="absolute bottom-20 left-5 w-24 h-24 border border-[#8EC4D9]/20 rounded-lg opacity-20 transform rotate-45 animate-float"></div>
+        {/* Subtle Decorative Elements */}
+        <div className="absolute top-10 right-10 w-32 h-32 border-2 border-[#f5c422]/20 rounded-full opacity-20"></div>
+        <div className="absolute bottom-20 left-5 w-24 h-24 border border-[#8EC4D9]/20 rounded-lg opacity-20 transform rotate-45"></div>
       </section>
 
       {/* About Us Section */}
@@ -274,7 +249,7 @@ export default function Index() {
           <div className="text-center mb-16">
             <h2
               ref={aboutHeadingRef}
-              className="font-display text-5xl md:text-6xl font-bold text-[#f5c422] mb-4 opacity-0 transform scale-75"
+              className="font-display text-5xl md:text-6xl font-bold text-[#f5c422] mb-4 opacity-0 transform translate-y-8"
             >
               About Vakruta
             </h2>
@@ -284,7 +259,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               ref={aboutImageRef}
-              className="bg-[#faf7f4] rounded-2xl p-8 border border-[#e8dcc8] shadow-md opacity-0 transform -translate-x-12 rotate-3 hover:rotate-0 transition-transform duration-500"
+              className="bg-[#faf7f4] rounded-2xl p-8 border border-[#e8dcc8] shadow-md opacity-0 transform translate-y-8 hover:shadow-lg transition-shadow duration-300"
             >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F14012f80d4794515a0272d68adccc272?format=webp&width=500"
@@ -295,7 +270,7 @@ export default function Index() {
 
             <div
               ref={aboutTextRef}
-              className="space-y-6 opacity-0 transform translate-x-12"
+              className="space-y-6 opacity-0 transform translate-y-8"
             >
               <p className="font-cinzel text-lg text-[#15122e] leading-relaxed">
                 Vakruta is NIT Rourkela's flagship Asian Parliamentary Debate tournament, bringing together the brightest minds from institutions across India. We provide a platform for intellectual discourse, critical thinking, and the art of persuasive argumentation.
@@ -306,19 +281,19 @@ export default function Index() {
               </p>
 
               <div className="grid grid-cols-3 gap-4 mt-8">
-                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:scale-110 transition-transform duration-300">
+                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:shadow-md transition-shadow duration-300">
                   <p className="font-display text-2xl font-bold text-[#15122e]">
                     100+
                   </p>
                   <p className="font-cinzel text-sm text-[#388697]">Debaters</p>
                 </div>
-                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:scale-110 transition-transform duration-300">
+                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:shadow-md transition-shadow duration-300">
                   <p className="font-display text-2xl font-bold text-[#15122e]">
                     20+
                   </p>
                   <p className="font-cinzel text-sm text-[#388697]">Rounds</p>
                 </div>
-                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:scale-110 transition-transform duration-300">
+                <div className="bg-[#e8f3f7] rounded-lg p-4 text-center border-l-4 border-[#388697] hover:shadow-md transition-shadow duration-300">
                   <p className="font-display text-2xl font-bold text-[#15122e]">
                     3
                   </p>
@@ -368,14 +343,14 @@ export default function Index() {
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="relative group opacity-0 transform translate-y-12 rotate-6"
+                className="relative group opacity-0 transform translate-y-8"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/5 to-[#f5c422]/5 rounded-2xl group-hover:from-[#388697]/20 group-hover:to-[#f5c422]/20 transition-all duration-500"></div>
-                <div className="relative bg-[#faf7f4] rounded-2xl border border-[#e8dcc8] shadow-md group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2 p-8">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/5 to-[#f5c422]/5 rounded-2xl group-hover:from-[#388697]/10 group-hover:to-[#f5c422]/10 transition-all duration-300"></div>
+                <div className="relative bg-[#faf7f4] rounded-2xl border border-[#e8dcc8] shadow-md group-hover:shadow-xl transition-all duration-300 p-8">
                   <img
                     src={stat.image}
                     alt={stat.label}
-                    className="w-full h-56 object-cover rounded-lg transition-all duration-500 group-hover:scale-105"
+                    className="w-full h-56 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="mt-6">
                     <p className="font-cinzel text-sm text-[#388697] uppercase tracking-wider">
@@ -401,7 +376,7 @@ export default function Index() {
           <div className="flex flex-col items-center text-center mb-16">
             <h2
               ref={brochureHeadingRef}
-              className="font-display text-5xl md:text-6xl font-bold text-[#f5c422] mb-4 opacity-0 transform translate-y-12"
+              className="font-display text-5xl md:text-6xl font-bold text-[#f5c422] mb-4 opacity-0 transform translate-y-8"
             >
               Tournament Brochure
             </h2>
@@ -415,18 +390,18 @@ export default function Index() {
             {/* Left - Brochure Image */}
             <div
               ref={brochureLeftRef}
-              className="flex justify-center opacity-0 transform -translate-x-20 scale-75"
+              className="flex justify-center opacity-0 transform translate-y-8"
             >
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#8EC4D9]/15 to-[#f5c422]/15 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-                <div className="relative bg-[#faf7f4] rounded-3xl overflow-hidden shadow-lg border-2 border-[#f5c422] group-hover:border-[#388697] transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#8EC4D9]/15 to-[#f5c422]/15 rounded-3xl blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-[#faf7f4] rounded-3xl overflow-hidden shadow-lg border-2 border-[#f5c422] group-hover:shadow-xl transition-all duration-300">
                   <div className="relative w-80 h-80 overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2Fa3b9abeeff424a8d82fadf2d789e4d7a?format=webp&width=600"
                       alt="Brochure Pattern"
-                      className="w-full h-full object-cover mx-auto transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
+                      className="w-full h-full object-cover mx-auto transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/0 to-[#f5c422]/0 group-hover:from-[#388697]/10 group-hover:to-[#f5c422]/10 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/0 to-[#f5c422]/0 group-hover:from-[#388697]/5 group-hover:to-[#f5c422]/5 transition-all duration-300"></div>
                   </div>
                 </div>
               </div>
@@ -435,9 +410,9 @@ export default function Index() {
             {/* Right - Brochure Info */}
             <div
               ref={brochureRightRef}
-              className="space-y-6 opacity-0 transform translate-x-20 scale-75"
+              className="space-y-6 opacity-0 transform translate-y-8"
             >
-              <div className="bg-[#e8f3f7] rounded-2xl p-8 border border-[#8EC4D9] hover:shadow-xl transition-shadow duration-300">
+              <div className="bg-[#e8f3f7] rounded-2xl p-8 border border-[#8EC4D9] hover:shadow-lg transition-shadow duration-300">
                 <h3 className="font-display text-2xl font-bold text-[#f5c422] mb-4">
                   What's Inside
                 </h3>
@@ -451,9 +426,9 @@ export default function Index() {
                   ].map((item, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-3 group hover:translate-x-2 transition-transform duration-300"
+                      className="flex items-start gap-3 group hover:translate-x-1 transition-transform duration-200"
                     >
-                      <span className="text-[#f5c422] font-bold text-xl group-hover:scale-125 transition-transform duration-300">
+                      <span className="text-[#f5c422] font-bold text-xl">
                         ✦
                       </span>
                       <span>{item}</span>
@@ -462,11 +437,9 @@ export default function Index() {
                 </ul>
               </div>
 
-              <button className="w-full bg-[#15122e] hover:bg-[#0f0c20] text-white font-display text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+              <button className="w-full bg-[#15122e] hover:bg-[#0f0c20] text-white font-display text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-2px]">
                 Download Brochure
               </button>
-
-              
             </div>
           </div>
         </div>
@@ -475,7 +448,7 @@ export default function Index() {
       {/* Gradient CTA Section with Grid Background */}
       <section
         ref={ctaSectionRef}
-        className="relative py-20 md:py-32 overflow-hidden opacity-0 transform scale-95"
+        className="relative py-20 md:py-32 overflow-hidden opacity-0 transform translate-y-8"
       >
         <GridBackground className="absolute inset-0 bg-gradient-to-b from-[#f3e8dc] via-[#f3e8dc] to-[#e8dcc8]" />
 
@@ -490,12 +463,9 @@ export default function Index() {
         {/* Enhanced gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#f3e8dc]/90 via-[#f3e8dc]/40 to-transparent"></div>
 
-        {/* Animated decorative elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#8EC4D9]/30 to-transparent rounded-full blur-3xl -ml-48 -mt-48 animate-pulse"></div>
-        <div
-          className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#f5c422]/20 to-transparent rounded-full blur-3xl -mr-48 -mb-48 animate-pulse"
-          style={{ animationDelay: "1s" }}
-        ></div>
+        {/* Subtle decorative elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#8EC4D9]/20 to-transparent rounded-full blur-3xl -ml-48 -mt-48"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#f5c422]/15 to-transparent rounded-full blur-3xl -mr-48 -mb-48"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl md:text-6xl font-bold text-[#f5c422] mb-4 leading-tight">
@@ -505,7 +475,7 @@ export default function Index() {
           <p className="font-cinzel text-lg md:text-xl text-[#15122e] max-w-3xl mx-auto mb-12 leading-relaxed">
             Step onto the stage at NIT Rourkela's premier debate tournament. Challenge your intellect, sharpen your arguments, and compete with the nation's finest debaters in the Asian Parliamentary format.
           </p>
-          <button className="bg-gradient-to-r from-[#f5c422] to-[#d4a913] hover:from-[#d4a913] hover:to-[#b39409] text-[#15122e] font-display font-bold text-lg px-12 py-4 rounded-xl shadow-xl transition-all duration-300 transform hover:scale-110 hover:shadow-2xl">
+          <button className="bg-gradient-to-r from-[#f5c422] to-[#d4a913] hover:from-[#d4a913] hover:to-[#b39409] text-[#15122e] font-display font-bold text-lg px-12 py-4 rounded-xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:translate-y-[-3px]">
             Register for Tournament
           </button>
         </div>
@@ -514,24 +484,6 @@ export default function Index() {
       <Footer />
 
       <style>{`
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        
-        @keyframes float {
-          0%, 100% { transform: translateY(0) rotate(45deg); }
-          50% { transform: translateY(-20px) rotate(45deg); }
-        }
-        
-        .animate-spin-slow {
-          animation: spin-slow 20s linear infinite;
-        }
-        
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-
         @font-face {
           font-family: 'Display';
           src: local('Georgia'), local('serif');
