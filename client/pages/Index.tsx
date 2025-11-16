@@ -253,18 +253,7 @@ export default function Index() {
               <div className="mb-6">
                 <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
                   {/* Stylized crescent */}
-                  <svg width="28" height="28" viewBox="0 0 28 28" className="text-[#f5c422]">
-                    <path d="M 14,4 Q 8,4 8,14 Q 8,24 14,24 Q 10,24 10,14 Q 10,4 14,4 Z" fill="currentColor" />
-                    <circle cx="20" cy="8" r="2.5" fill="currentColor" />
-                  </svg>
-                  <span className="font-cinzel text-xs uppercase tracking-[0.4em] text-[#388697]">
-                    NIT Rourkela Presents
-                  </span>
-                  {/* Stylized crescent mirrored */}
-                  <svg width="28" height="28" viewBox="0 0 28 28" className="text-[#f5c422]">
-                    <path d="M 14,4 Q 20,4 20,14 Q 20,24 14,24 Q 18,24 18,14 Q 18,4 14,4 Z" fill="currentColor" />
-                    <circle cx="8" cy="8" r="2.5" fill="currentColor" />
-                  </svg>
+                  
                 </div>
               </div>
 
