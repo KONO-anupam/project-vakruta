@@ -45,10 +45,10 @@ export default function Index() {
       // Heading animation - letter by letter reveal
       const heading = heroHeadingRef.current;
       const text = heading.textContent || '';
-      heading.innerHTML = text.split('').map(char => 
+      heading.innerHTML = text.split('').map(char =>
         char === ' ' ? ' ' : `<span style="display:inline-block;opacity:0;transform:translateY(20px)">${char}</span>`
       ).join('');
-      
+
       const chars = heading.querySelectorAll('span');
       chars.forEach((char, i) => {
         setTimeout(() => {
@@ -94,7 +94,7 @@ export default function Index() {
             aboutHeadingRef.current.style.opacity = '1';
             aboutHeadingRef.current.style.transform = 'scale(1)';
           }
-          
+
           setTimeout(() => {
             if (aboutImageRef.current) {
               aboutImageRef.current.style.transition = 'all 0.8s ease-out';
@@ -221,8 +221,8 @@ export default function Index() {
           </div>
 
           {/* Right Visual Element */}
-          <div 
-            ref={heroImageRef} 
+          <div
+            ref={heroImageRef}
             className="flex-1 relative opacity-0 transform scale-75 rotate-12"
           >
             <div className="relative w-full h-96 md:h-full flex items-center justify-center">
@@ -257,7 +257,7 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div 
+            <div
               ref={aboutImageRef}
               className="bg-[#faf7f4] rounded-2xl p-8 border border-[#e8dcc8] shadow-md opacity-0 transform -translate-x-12 rotate-3 hover:rotate-0 transition-transform duration-500"
             >
@@ -331,11 +331,14 @@ export default function Index() {
               <div key={idx} className="relative group opacity-0 transform translate-y-12 rotate-6">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/5 to-[#f5c422]/5 rounded-2xl group-hover:from-[#388697]/20 group-hover:to-[#f5c422]/20 transition-all duration-500"></div>
                 <div className="relative bg-[#faf7f4] rounded-2xl overflow-hidden border border-[#e8dcc8] shadow-md group-hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
-                  <img
-                    src={stat.image}
-                    alt={stat.label}
-                    className="w-full h-56 object-cover"
-                  />
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={stat.image}
+                      alt={stat.label}
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#15122e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
                   <div className="p-6">
                     <p className="font-cinzel text-sm text-[#388697] uppercase tracking-wider">
                       {stat.year} - {stat.label}
@@ -373,11 +376,14 @@ export default function Index() {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#8EC4D9]/15 to-[#f5c422]/15 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
                 <div className="relative bg-[#faf7f4] rounded-3xl overflow-hidden shadow-lg border-2 border-[#f5c422] group-hover:border-[#388697] transition-all duration-500">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2Fa3b9abeeff424a8d82fadf2d789e4d7a?format=webp&width=600"
-                    alt="Brochure Pattern"
-                    className="w-80 h-80 object-cover mx-auto group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <div className="relative w-80 h-80 overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2Fa3b9abeeff424a8d82fadf2d789e4d7a?format=webp&width=600"
+                      alt="Brochure Pattern"
+                      className="w-full h-full object-cover mx-auto transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/0 to-[#f5c422]/0 group-hover:from-[#388697]/10 group-hover:to-[#f5c422]/10 transition-all duration-500"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -417,12 +423,12 @@ export default function Index() {
       </section>
 
       {/* Gradient CTA Section with Grid Background */}
-      <section 
+      <section
         ref={ctaSectionRef}
         className="relative py-20 md:py-32 overflow-hidden opacity-0 transform scale-95"
       >
         <GridBackground className="absolute inset-0 bg-gradient-to-b from-[#f3e8dc] via-[#e8f3f7] to-[#d1e8f1]" />
-        
+
         <div className="absolute inset-0">
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F7bd6f9d19eb849b583b1cfc21fd88993?format=webp&width=1400"
@@ -436,7 +442,7 @@ export default function Index() {
 
         {/* Animated decorative elements */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#8EC4D9]/30 to-transparent rounded-full blur-3xl -ml-48 -mt-48 animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#f5c422]/20 to-transparent rounded-full blur-3xl -mr-48 -mb-48 animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#f5c422]/20 to-transparent rounded-full blur-3xl -mr-48 -mb-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl md:text-6xl font-bold text-[#f5c422] mb-6 leading-tight">
