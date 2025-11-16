@@ -204,13 +204,13 @@ export default function Index() {
               { year: "2025", label: "Sponsorships", value: "₹1.8 Cr", icon: "" },
             ].map((stat, idx) => (
               <div key={idx} className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-amber-600/5 rounded-2xl group-hover:from-blue-900/10 group-hover:to-amber-600/10 transition-all"></div>
-                <div className="relative bg-white rounded-2xl p-8 border border-blue-100 shadow-md hover:shadow-lg transition-all">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#388697]/5 to-[#f5c422]/5 rounded-2xl group-hover:from-[#388697]/10 group-hover:to-[#f5c422]/10 transition-all"></div>
+                <div className="relative bg-[#faf7f4] rounded-2xl p-8 border border-[#e8dcc8] shadow-md hover:shadow-lg transition-all">
                   <div className="text-4xl mb-4">{stat.icon}</div>
-                  <p className="font-cinzel text-sm text-blue-700 uppercase tracking-wider">
+                  <p className="font-cinzel text-sm text-[#388697] uppercase tracking-wider">
                     {stat.year} - {stat.label}
                   </p>
-                  <p className="font-display text-4xl font-bold text-blue-900 mt-2">
+                  <p className="font-display text-4xl font-bold text-[#f5c422] mt-2">
                     {stat.value}
                   </p>
                 </div>
