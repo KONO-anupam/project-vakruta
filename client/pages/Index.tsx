@@ -861,36 +861,6 @@ export default function Index() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
-
-            {/* Mobile: Heading First */}
-            <div className="md:hidden">
-              <div
-                ref={brochureHeadingRef}
-                className="mb-12 opacity-0 transform translate-y-8"
-              >
-                {/* Ornate Header */}
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-8 h-8 border-2 border-[#f5c422] rotate-45"></div>
-                  <div className="flex-1 h-px bg-[#f5c422]"></div>
-                  <div className="w-8 h-8 border-2 border-[#f5c422] rotate-45"></div>
-                </div>
-
-                <h2 className="font-display text-5xl sm:text-6xl font-black text-white leading-none mb-6">
-                  COMPLETE<br />GUIDE
-                </h2>
-
-                <div className="flex items-center gap-3">
-                  <svg width="30" height="30" viewBox="0 0 40 40" className="text-[#f5c422]">
-                    <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
-                  </svg>
-                  <div className="w-20 h-1 bg-[#f5c422]"></div>
-                  <svg width="30" height="30" viewBox="0 0 40 40" className="text-[#f5c422]">
-                    <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
             {/* Left - Ornate Manuscript Frame */}
             <div
               ref={brochureLeftRef}
@@ -903,10 +873,10 @@ export default function Index() {
                 <div className="absolute -inset-4 border-2 border-[#f3e8dc]"></div>
 
                 {/* Corner Decorations */}
-                <div className="absolute -top-6 -left-6 w-12 h-12 sm:w-16 sm:h-16 border-t-4 border-l-4 border-[#f5c422]"></div>
-                <div className="absolute -top-6 -right-6 w-12 h-12 sm:w-16 sm:h-16 border-t-4 border-r-4 border-[#f5c422]"></div>
-                <div className="absolute -bottom-6 -left-6 w-12 h-12 sm:w-16 sm:h-16 border-b-4 border-l-4 border-[#f5c422]"></div>
-                <div className="absolute -bottom-6 -right-6 w-12 h-12 sm:w-16 sm:h-16 border-b-4 border-r-4 border-[#f5c422]"></div>
+                <div className="absolute -top-6 -left-6 w-16 h-16 border-t-4 border-l-4 border-[#f5c422]"></div>
+                <div className="absolute -top-6 -right-6 w-16 h-16 border-t-4 border-r-4 border-[#f5c422]"></div>
+                <div className="absolute -bottom-6 -left-6 w-16 h-16 border-b-4 border-l-4 border-[#f5c422]"></div>
+                <div className="absolute -bottom-6 -right-6 w-16 h-16 border-b-4 border-r-4 border-[#f5c422]"></div>
 
                 {/* Manuscript Image */}
                 <div className="relative bg-[#f3e8dc] p-4">
@@ -935,10 +905,9 @@ export default function Index() {
 
             {/* Right - Royal Proclamation Style */}
             <div className="md:col-span-3">
-              {/* Desktop: Heading */}
               <div
                 ref={brochureHeadingRef}
-                className="mb-12 opacity-0 transform translate-y-8 hidden md:block"
+                className="mb-12 opacity-0 transform translate-y-8"
               >
                 {/* Ornate Header */}
                 <div className="flex items-center gap-4 mb-6">
@@ -967,14 +936,14 @@ export default function Index() {
                 className="opacity-0 transform translate-y-8"
               >
                 {/* Ornate Content Box */}
-                <div className="relative bg-[#15122e] border-4 border-[#f5c422] p-6 sm:p-10 mb-8">
+                <div className="relative bg-[#15122e] border-4 border-[#f5c422] p-10 mb-8">
                   {/* Corner Ornaments */}
                   <div className="absolute -top-3 -left-3 w-6 h-6 bg-[#f5c422]"></div>
                   <div className="absolute -top-3 -right-3 w-6 h-6 bg-[#f5c422]"></div>
                   <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-[#f5c422]"></div>
                   <div className="absolute -bottom-3 -right-3 w-6 h-6 bg-[#f5c422]"></div>
 
-                  <p className="font-cinzel text-base sm:text-lg text-[#f3e8dc] leading-relaxed mb-8 italic">
+                  <p className="font-cinzel text-lg text-[#f3e8dc] leading-relaxed mb-8 italic">
                     Download our comprehensive tournament manuscript featuring complete details about Vakruta's debate format, schedule, rules, and registration information.
                   </p>
 
@@ -1005,14 +974,14 @@ export default function Index() {
                   {/* Decorative Border Animation */}
                   <div className="absolute -inset-2 border-2 border-[#f5c422] group-hover:inset-0 transition-all duration-300"></div>
 
-                  <button className="relative w-full bg-[#f5c422] text-[#15122e] font-display text-lg sm:text-xl font-black py-5 sm:py-6 px-6 sm:px-8 uppercase tracking-[0.15em] sm:tracking-[0.2em] group-hover:bg-[#f3e8dc] transition-all duration-300">
-                    <span className="inline-flex items-center justify-center gap-3 sm:gap-4">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="sm:w-6 sm:h-6">
+                  <button className="relative w-full bg-[#f5c422] text-[#15122e] font-display text-xl font-black py-6 px-8 uppercase tracking-[0.2em] group-hover:bg-[#f3e8dc] transition-all duration-300">
+                    <span className="inline-flex items-center justify-center gap-4">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z" />
                         <circle cx="17" cy="7" r="2.5" />
                       </svg>
                       Download Brochure
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="sm:w-6 sm:h-6">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M 12,2 Q 17,2 17,12 Q 17,22 12,22 Q 15,22 15,12 Q 15,2 12,2 Z" />
                         <circle cx="7" cy="7" r="2.5" />
                       </svg>
@@ -1023,7 +992,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-      </section>
 
         {/* Bottom Decorative Border */}
         <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-4 py-4">
