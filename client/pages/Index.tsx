@@ -229,7 +229,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-amber-400/20 rounded-3xl blur-3xl animate-pulse"></div>
               <div className="relative bg-white rounded-3xl p-8 border-2 border-blue-900/10 shadow-2xl hover:shadow-3xl transition-shadow duration-500">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F2b1a5895495e4fb98781781147a0dfc0?format=webp&width=400"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F08d291a2878646a0857bad8abc1695e6?format=webp&width=800"
                   alt="Vakruta Pattern"
                   className="w-full h-auto max-h-80 object-contain"
                 />
