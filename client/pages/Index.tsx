@@ -362,7 +362,7 @@ export default function Index() {
             >
               Discover Our Brochure
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[#f5c422] to-transparent mx-auto mb-6"></div>
+            <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#f5c422] to-transparent mx-auto mb-6"></div>
             <p className="font-cinzel text-lg text-[#15122e] max-w-2xl">
               Explore the complete story of Vakruta through our comprehensive brochure,
               featuring detailed information about our heritage, achievements, and vision.
