@@ -188,9 +188,9 @@ export default function Index() {
 
               {/* CTA Button with Kufic-style borders */}
               <div className="flex justify-center md:justify-start">
-                <button className="relative group text-2xl">
+                <button className="relative group">
                   <div className="absolute inset-0 bg-[#f5c422] transform group-hover:scale-105 transition-transform duration-300"></div>
-                  <div className="relative bg-[#15122e] m-1 px-10 py-4 font-cinzel font-bold text-[#f5c422] uppercase tracking-[0.2em] group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300">
+                  <div className="relative bg-[#15122e] m-1 px-10 py-4 font-cinzel font-bold text-xl text-[#f5c422] uppercase tracking-[0.2em] group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300">
                     <span className="inline-flex items-center gap-3">
                       <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
                         <path d="M 9,2 Q 5,2 5,9 Q 5,16 9,16 Q 7,16 7,9 Q 7,2 9,2 Z" />
@@ -448,7 +448,7 @@ export default function Index() {
                     </svg>
                   </div>
                   <p className="font-cinzel text-lg text-[#f3e8dc] leading-relaxed">
-                    Vakruta is NIT Rourkela's flagship Asian Parliamentary Debate tournament, bringing together the brightest minds from institutions across India in a celebration of eloquence and intellect.
+                    Vakruta is NIT Rourkela's flagship Asian Parliamentary Debate tournament, bringing together the brightest minds from institutions across India in a celebration of eloquence and intellect. Organized by Clarion, the literary and debating club of NIT Rourkela, this tournament embodies our commitment to fostering intellectual discourse and oratorical excellence.
                   </p>
                   <div className="absolute bottom-0 right-0 w-10 h-10">
                     <svg viewBox="0 0 40 40" className="w-full h-full text-[#388697]">
@@ -480,13 +480,13 @@ export default function Index() {
                 </div>
 
                 {/* Islamic Geometric Stats with Star Patterns */}
-                <div className="grid grid-cols-3 gap-6 mt-12 whitespace-nowrap">
+                <div className="grid grid-cols-3 gap-6 mt-12">
                   {[
                     { num: "100+", label: "Debaters", color: "#f5c422" },
                     { num: "20+", label: "Rounds", color: "#388697" },
                     { num: "3", label: "Days", color: "#f5c422" }
                   ].map((stat, i) => (
-                    <div key={i} className="text-center relative group whitespace-nowrap">
+                    <div key={i} className="text-center relative group">
                       {/* Islamic 16-pointed star background */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-10">
                         <svg width="110" height="110" viewBox="0 0 110 110">
@@ -846,12 +846,12 @@ export default function Index() {
 
                   <button className="relative w-full bg-[#f5c422] text-[#15122e] font-display text-xl sm:text-2xl md:text-2xl font-black py-4 sm:py-5 md:py-6 px-4 sm:px-6 md:px-8 uppercase tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] group-hover:bg-[#f3e8dc] transition-all duration-300">
                     <span className="inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
                         <path d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z" />
                         <circle cx="17" cy="7" r="2.5" />
                       </svg>
                       <span className="text-lg sm:text-xl md:text-2xl lg:text-2xl">Download Brochure</span>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
                         <path d="M 12,2 Q 17,2 17,12 Q 17,22 12,22 Q 15,22 15,12 Q 15,2 12,2 Z" />
                         <circle cx="7" cy="7" r="2.5" />
                       </svg>
@@ -873,7 +873,7 @@ export default function Index() {
       {/* CTA Section - Royal Decree */}
       <section
         ref={ctaSectionRef}
-        className="relative py-32 md:py-48 bg-[#15122e] overflow-hidden"
+        className="relative py-16 sm:py-24 md:py-32 lg:py-48 bg-[#15122e] overflow-hidden"
       >
         {/* Ornate Background */}
         <div className="absolute inset-0 opacity-10">
@@ -888,16 +888,16 @@ export default function Index() {
         <IslamicPattern className="absolute inset-0 opacity-50" />
 
         {/* Top Border Decoration with Crescents */}
-        <div className="absolute top-0 left-0 right-0 flex justify-center gap-6 py-6">
+        <div className="absolute top-0 left-0 right-0 hidden sm:flex justify-center gap-3 sm:gap-6 py-3 sm:py-6">
           {[...Array(12)].map((_, i) => (
             <div key={i}>
               {i % 3 === 0 ? (
-                <svg width="20" height="20" viewBox="0 0 20 20" className="text-[#f5c422] opacity-30">
+                <svg width="16" height="16" viewBox="0 0 20 20" className="text-[#f5c422] opacity-30 sm:w-5 sm:h-5">
                   <path d="M 10,2 Q 6,2 6,10 Q 6,18 10,18 Q 8,18 8,10 Q 8,2 10,2 Z" fill="currentColor" />
                   <circle cx="14" cy="6" r="1.5" fill="currentColor" />
                 </svg>
               ) : (
-                <div className="w-2 h-2 rotate-45 bg-[#388697] opacity-30"></div>
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-[#388697] opacity-30"></div>
               )}
             </div>
           ))}
@@ -906,76 +906,76 @@ export default function Index() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             {/* Ornate Header */}
-            <div className="mb-16">
-              <div className="flex items-center justify-center gap-6 mb-8">
-                <div className="w-20 h-px bg-gradient-to-r from-transparent to-[#388697]"></div>
+            <div className="mb-8 sm:mb-12 md:mb-16">
+              <div className="flex items-center justify-center gap-3 sm:gap-6 mb-4 sm:mb-6 md:mb-8">
+                <div className="w-12 sm:w-16 md:w-20 h-px bg-gradient-to-r from-transparent to-[#388697]"></div>
                 <div className="relative">
                   <div className="absolute inset-0 border-2 border-[#388697] rotate-45"></div>
-                  <span className="relative block font-cinzel text-xs uppercase tracking-[0.6em] text-[#388697] px-10 py-3">
+                  <span className="relative block font-cinzel text-[0.5rem] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.6em] text-[#388697] px-4 sm:px-8 md:px-10 py-2 sm:py-3">
                     Be Part of History
                   </span>
                 </div>
-                <div className="w-20 h-px bg-gradient-to-l from-transparent to-[#388697]"></div>
+                <div className="w-12 sm:w-16 md:w-20 h-px bg-gradient-to-l from-transparent to-[#388697]"></div>
               </div>
 
               {/* Grand Title with Ornate Frame */}
               <div className="relative inline-block">
-                {/* Decorative Corner Elements */}
-                <div className="absolute -top-10 -left-10 w-20 h-20 border-t-4 border-l-4 border-[#f5c422]"></div>
-                <div className="absolute -top-10 -right-10 w-20 h-20 border-t-4 border-r-4 border-[#f5c422]"></div>
-                <div className="absolute -bottom-10 -left-10 w-20 h-20 border-b-4 border-l-4 border-[#388697]"></div>
-                <div className="absolute -bottom-10 -right-10 w-20 h-20 border-b-4 border-r-4 border-[#388697]"></div>
+                {/* Decorative Corner Elements - Responsive */}
+                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 md:-top-10 md:-left-10 w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 border-t-2 border-l-2 sm:border-t-4 sm:border-l-4 border-[#f5c422]"></div>
+                <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 md:-top-10 md:-right-10 w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 border-t-2 border-r-2 sm:border-t-4 sm:border-r-4 border-[#f5c422]"></div>
+                <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 md:-bottom-10 md:-left-10 w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 border-b-2 border-l-2 sm:border-b-4 sm:border-l-4 border-[#388697]"></div>
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 md:-bottom-10 md:-right-10 w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20 border-b-2 border-r-2 sm:border-b-4 sm:border-r-4 border-[#388697]"></div>
 
-                {/* Crescents in Corners */}
-                <div className="absolute -top-6 -left-6">
-                  <svg width="44" height="44" viewBox="0 0 44 44" className="text-[#f5c422]">
+                {/* Crescents in Corners - Responsive */}
+                <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 md:-top-6 md:-left-6">
+                  <svg width="28" height="28" viewBox="0 0 44 44" className="text-[#f5c422] sm:w-9 sm:h-9 md:w-11 md:h-11">
                     <path d="M 22,6 Q 14,6 14,22 Q 14,38 22,38 Q 17,38 17,22 Q 17,6 22,6 Z" fill="currentColor" />
                     <circle cx="32" cy="14" r="4" fill="currentColor" />
                   </svg>
                 </div>
-                <div className="absolute -top-6 -right-6">
-                  <svg width="44" height="44" viewBox="0 0 44 44" className="text-[#388697]">
+                <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 md:-top-6 md:-right-6">
+                  <svg width="28" height="28" viewBox="0 0 44 44" className="text-[#388697] sm:w-9 sm:h-9 md:w-11 md:h-11">
                     <path d="M 22,6 Q 30,6 30,22 Q 30,38 22,38 Q 27,38 27,22 Q 27,6 22,6 Z" fill="currentColor" />
                     <circle cx="12" cy="14" r="4" fill="currentColor" />
                   </svg>
                 </div>
-                <div className="absolute -bottom-6 -left-6">
-                  <svg width="44" height="44" viewBox="0 0 44 44" className="text-[#388697]">
+                <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 md:-bottom-6 md:-left-6">
+                  <svg width="28" height="28" viewBox="0 0 44 44" className="text-[#388697] sm:w-9 sm:h-9 md:w-11 md:h-11">
                     <path d="M 22,6 Q 14,6 14,22 Q 14,38 22,38 Q 17,38 17,22 Q 17,6 22,6 Z" fill="currentColor" />
                     <circle cx="32" cy="30" r="4" fill="currentColor" />
                   </svg>
                 </div>
-                <div className="absolute -bottom-6 -right-6">
-                  <svg width="44" height="44" viewBox="0 0 44 44" className="text-[#f5c422]">
+                <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-bottom-6 md:-right-6">
+                  <svg width="28" height="28" viewBox="0 0 44 44" className="text-[#f5c422] sm:w-9 sm:h-9 md:w-11 md:h-11">
                     <path d="M 22,6 Q 30,6 30,22 Q 30,38 22,38 Q 27,38 27,22 Q 27,6 22,6 Z" fill="currentColor" />
                     <circle cx="12" cy="30" r="4" fill="currentColor" />
                   </svg>
                 </div>
 
-                <div className="px-20 py-12">
-                  <h2 className="font-display text-8xl md:text-[10rem] font-black text-[#f5c422] leading-[0.9] whitespace-nowrap">
+                <div className="px-6 sm:px-12 md:px-20 py-6 sm:py-10 md:py-12">
+                  <h2 className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black text-[#f5c422] leading-[0.9]">
                     VAKRUTA
                   </h2>
-                  <div className="flex items-center justify-center gap-4 my-6">
-                    <div className="w-24 h-1 bg-[#388697]"></div>
-                    <div className="w-6 h-6 rotate-45 border-2 border-[#f5c422]"></div>
-                    <div className="w-24 h-1 bg-[#388697]"></div>
+                  <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 my-3 sm:my-4 md:my-6">
+                    <div className="w-12 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-[#388697]"></div>
+                    <div className="w-3 h-3 sm:w-5 sm:h-5 md:w-6 md:h-6 rotate-45 border border-[#f5c422] sm:border-2"></div>
+                    <div className="w-12 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-[#388697]"></div>
                   </div>
-                  <p className="font-display text-6xl font-black text-white">2025</p>
+                  <p className="font-display text-3xl sm:text-5xl md:text-6xl font-black text-white">2025</p>
                 </div>
               </div>
             </div>
 
             {/* Ornate Description Box */}
-            <div className="max-w-4xl mx-auto mb-16">
-              <div className="relative bg-gradient-to-b from-[#388697]/20 to-transparent border-t-2 border-b-2 border-[#f5c422] py-10 px-8">
+            <div className="max-w-4xl mx-auto mb-8 sm:mb-12 md:mb-16">
+              <div className="relative bg-gradient-to-b from-[#388697]/20 to-transparent border-t-2 border-b-2 border-[#f5c422] py-6 sm:py-8 md:py-10 px-4 sm:px-6 md:px-8">
                 {/* Corner Decorations */}
-                <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#f5c422]"></div>
-                <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#f5c422]"></div>
-                <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#388697]"></div>
-                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#388697]"></div>
+                <div className="absolute top-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-[#f5c422]"></div>
+                <div className="absolute top-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-[#f5c422]"></div>
+                <div className="absolute bottom-0 left-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-[#388697]"></div>
+                <div className="absolute bottom-0 right-0 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-[#388697]"></div>
 
-                <p className="font-cinzel text-xl md:text-2xl text-[#f3e8dc] leading-relaxed italic">
+                <p className="font-cinzel text-base sm:text-lg md:text-xl lg:text-2xl text-[#f3e8dc] leading-relaxed italic">
                   Step onto the stage at NIT Rourkela's premier debate tournament. Challenge your intellect, sharpen your arguments, and compete with the nation's finest debaters in the grand tradition of scholarly discourse.
                 </p>
               </div>
@@ -983,47 +983,47 @@ export default function Index() {
 
             {/* Royal CTA Button */}
             <div className="relative inline-block">
-              {/* Multi-layer Ornate Frame */}
-              <div className="absolute -inset-8 border-2 border-[#f5c422] opacity-30"></div>
-              <div className="absolute -inset-6 border border-[#388697] opacity-50"></div>
-              <div className="absolute -inset-4 border-2 border-[#f5c422]"></div>
+              {/* Multi-layer Ornate Frame - Responsive */}
+              <div className="absolute -inset-4 sm:-inset-6 md:-inset-8 border border-[#f5c422] sm:border-2 opacity-30"></div>
+              <div className="absolute -inset-3 sm:-inset-4 md:-inset-6 border border-[#388697] opacity-50"></div>
+              <div className="absolute -inset-2 sm:-inset-3 md:-inset-4 border border-[#f5c422] sm:border-2"></div>
 
-              {/* Corner Crescents */}
-              <div className="absolute -top-4 -left-4">
-                <svg width="32" height="32" viewBox="0 0 32 32" className="text-[#f5c422]">
+              {/* Corner Crescents - Responsive */}
+              <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4">
+                <svg width="24" height="24" viewBox="0 0 32 32" className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8">
                   <path d="M 16,4 Q 10,4 10,16 Q 10,28 16,28 Q 13,28 13,16 Q 13,4 16,4 Z" fill="currentColor" />
                   <circle cx="22" cy="10" r="3" fill="currentColor" />
                 </svg>
               </div>
-              <div className="absolute -top-4 -right-4">
-                <svg width="32" height="32" viewBox="0 0 32 32" className="text-[#f5c422]">
+              <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 md:-top-4 md:-right-4">
+                <svg width="24" height="24" viewBox="0 0 32 32" className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8">
                   <path d="M 16,4 Q 22,4 22,16 Q 22,28 16,28 Q 19,28 19,16 Q 19,4 16,4 Z" fill="currentColor" />
                   <circle cx="10" cy="10" r="3" fill="currentColor" />
                 </svg>
               </div>
-              <div className="absolute -bottom-4 -left-4">
-                <svg width="32" height="32" viewBox="0 0 32 32" className="text-[#f5c422]">
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 md:-bottom-4 md:-left-4">
+                <svg width="24" height="24" viewBox="0 0 32 32" className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8">
                   <path d="M 16,4 Q 10,4 10,16 Q 10,28 16,28 Q 13,28 13,16 Q 13,4 16,4 Z" fill="currentColor" />
                   <circle cx="22" cy="22" r="3" fill="currentColor" />
                 </svg>
               </div>
-              <div className="absolute -bottom-4 -right-4">
-                <svg width="32" height="32" viewBox="0 0 32 32" className="text-[#f5c422]">
+              <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 md:-bottom-4 md:-right-4">
+                <svg width="24" height="24" viewBox="0 0 32 32" className="text-[#f5c422] sm:w-7 sm:h-7 md:w-8 md:h-8">
                   <path d="M 16,4 Q 22,4 22,16 Q 22,28 16,28 Q 19,28 19,16 Q 19,4 16,4 Z" fill="currentColor" />
                   <circle cx="10" cy="22" r="3" fill="currentColor" />
                 </svg>
               </div>
 
-              <button className="relative group whitespace-nowrap">
+              <button className="relative group">
                 <div className="absolute inset-0 bg-[#f5c422] transform group-hover:scale-105 transition-transform duration-300"></div>
-                <div className="relative bg-[#15122e] m-2 px-16 py-7 font-display font-black text-3xl text-[#f5c422] uppercase tracking-[0.3em] group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300">
-                  <span className="inline-flex items-center gap-4 whitespace-nowrap">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="currentColor">
+                <div className="relative bg-[#15122e] m-1 sm:m-2 px-6 sm:px-10 md:px-16 py-4 sm:py-6 md:py-7 font-display font-black text-lg sm:text-2xl md:text-3xl text-[#f5c422] uppercase tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300">
+                  <span className="inline-flex items-center gap-2 sm:gap-3 md:gap-4">
+                    <svg width="20" height="20" viewBox="0 0 28 28" fill="currentColor" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
                       <path d="M 14,2 Q 9,2 9,14 Q 9,26 14,26 Q 11,26 11,14 Q 11,2 14,2 Z" />
                       <circle cx="20" cy="8" r="3" />
                     </svg>
                     Register Now
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="currentColor">
+                    <svg width="20" height="20" viewBox="0 0 28 28" fill="currentColor" className="sm:w-6 sm:h-6 md:w-7 md:h-7">
                       <path d="M 14,2 Q 19,2 19,14 Q 19,26 14,26 Q 17,26 17,14 Q 17,2 14,2 Z" />
                       <circle cx="8" cy="8" r="3" />
                     </svg>
@@ -1035,29 +1035,29 @@ export default function Index() {
         </div>
 
         {/* Bottom Ornate Border */}
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-6 py-6">
+        <div className="absolute bottom-0 left-0 right-0 hidden sm:flex justify-center gap-3 sm:gap-6 py-3 sm:py-6">
           {[...Array(12)].map((_, i) => (
             <div key={i}>
               {i % 3 === 0 ? (
-                <svg width="20" height="20" viewBox="0 0 20 20" className="text-[#388697] opacity-30">
+                <svg width="16" height="16" viewBox="0 0 20 20" className="text-[#388697] opacity-30 sm:w-5 sm:h-5">
                   <path d="M 10,2 Q 14,2 14,10 Q 14,18 10,18 Q 12,18 12,10 Q 12,2 10,2 Z" fill="currentColor" />
                   <circle cx="6" cy="6" r="1.5" fill="currentColor" />
                 </svg>
               ) : (
-                <div className="w-2 h-2 rotate-45 bg-[#f5c422] opacity-30"></div>
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-[#f5c422] opacity-30"></div>
               )}
             </div>
           ))}
         </div>
 
-        {/* Large Ornate Background Text */}
-        <div className="absolute bottom-10 left-0 right-0 overflow-hidden opacity-5 pointer-events-none select-none">
+        {/* Large Ornate Background Text - Hidden on mobile */}
+        <div className="absolute bottom-10 left-0 right-0 overflow-hidden opacity-5 pointer-events-none select-none hidden md:block">
           <div className="flex items-center justify-center gap-12">
             <svg width="80" height="80" viewBox="0 0 80 80" className="text-white">
               <path d="M 40,8 Q 28,8 28,40 Q 28,72 40,72 Q 34,72 34,40 Q 34,8 40,8 Z" fill="currentColor" />
               <circle cx="56" cy="22" r="8" fill="currentColor" />
             </svg>
-            <p className="font-display text-[8rem] font-black text-white whitespace-nowrap">
+            <p className="font-display text-[8rem] font-black text-white">
               VAKRUTA
             </p>
             <svg width="80" height="80" viewBox="0 0 80 80" className="text-white">
