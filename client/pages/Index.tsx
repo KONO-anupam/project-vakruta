@@ -486,7 +486,7 @@ export default function Index() {
                     { num: "20+", label: "Rounds", color: "#388697" },
                     { num: "3", label: "Days", color: "#f5c422" }
                   ].map((stat, i) => (
-                    <div key={i} className="text-center relative group">
+                    <div key={i} className="text-center relative group whitespace-nowrap">
                       {/* Islamic 16-pointed star background */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-10">
                         <svg width="110" height="110" viewBox="0 0 110 110">
