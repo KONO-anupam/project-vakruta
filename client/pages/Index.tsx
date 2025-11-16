@@ -188,7 +188,7 @@ export default function Index() {
 
               {/* CTA Button with Kufic-style borders */}
               <div className="flex justify-center md:justify-start">
-                <button className="relative group text-2.5xl">
+                <button className="relative group text-xl">
                   <div className="absolute inset-0 bg-[#f5c422] transform group-hover:scale-105 transition-transform duration-300"></div>
                   <div className="relative bg-[#15122e] m-1 px-10 py-4 font-cinzel font-bold text-[#f5c422] uppercase tracking-[0.2em] group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300">
                     <span className="inline-flex items-center gap-3">
