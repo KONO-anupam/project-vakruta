@@ -7,7 +7,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b-2 border-blue-900/10 shadow-md">
+    <nav className="sticky top-0 z-50 bg-[#f3e8dc] border-b-2 border-[#e8dcc8] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-3 group">
@@ -23,25 +23,25 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("hero")}
-              className="text-blue-900 font-cinzel font-semibold hover:text-blue-700 transition-colors text-sm"
+              className="text-[#15122e] font-cinzel font-semibold hover:text-[#f5c422] transition-colors text-sm"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-blue-900 font-cinzel font-semibold hover:text-blue-700 transition-colors text-sm"
+              className="text-[#15122e] font-cinzel font-semibold hover:text-[#f5c422] transition-colors text-sm"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("statistics")}
-              className="text-blue-900 font-cinzel font-semibold hover:text-blue-700 transition-colors text-sm"
+              className="text-[#15122e] font-cinzel font-semibold hover:text-[#f5c422] transition-colors text-sm"
             >
               Statistics
             </button>
             <button
               onClick={() => scrollToSection("brochure")}
-              className="text-blue-900 font-cinzel font-semibold hover:text-blue-700 transition-colors text-sm"
+              className="text-[#15122e] font-cinzel font-semibold hover:text-[#f5c422] transition-colors text-sm"
             >
               Brochure
             </button>
