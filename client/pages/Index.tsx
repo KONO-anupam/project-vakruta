@@ -834,234 +834,203 @@ export default function Index() {
         </div>
       </section>
 
-export default function BrochureSection() {
-  const brochureHeadingRef = useRef(null);
-  const brochureLeftRef = useRef(null);
-  const brochureRightRef = useRef(null);
+{/* Brochure Section - Royal Scroll */}
+<section
+  id="brochure"
+  className="py-24 md:py-32 bg-[#388697] relative overflow-hidden"
+>
+  {/* Ornate Pattern Overlay */}
+  <div className="absolute inset-0 opacity-10">
+    <svg className="w-full h-full" viewBox="0 0 100 100">
+      <defs>
+        <pattern id="mughal-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="10" cy="10" r="1.5" fill="#15122e" />
+          <path d="M 10,5 L 15,10 L 10,15 L 5,10 Z" fill="none" stroke="#15122e" strokeWidth="0.5" />
+        </pattern>
+      </defs>
+      <rect width="100" height="100" fill="url(#mughal-pattern)" />
+    </svg>
+  </div>
 
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
+  {/* Decorative Border */}
+  <div className="absolute top-0 left-0 right-0 flex justify-center gap-4 py-4">
+    {[...Array(8)].map((_, i) => (
+      <div key={i} className="w-2 h-2 rotate-45 bg-[#f5c422] opacity-50"></div>
+    ))}
+  </div>
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          entry.target.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-        }
-      });
-    }, observerOptions);
-
-    if (brochureHeadingRef.current) observer.observe(brochureHeadingRef.current);
-    if (brochureLeftRef.current) observer.observe(brochureLeftRef.current);
-    if (brochureRightRef.current) observer.observe(brochureRightRef.current);
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <section
-      id="brochure"
-      className="py-16 sm:py-20 md:py-24 lg:py-32 bg-[#388697] relative overflow-hidden"
-    >
-      {/* Ornate Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full" viewBox="0 0 100 100">
-          <defs>
-            <pattern id="mughal-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-              <circle cx="10" cy="10" r="1.5" fill="#15122e" />
-              <path d="M 10,5 L 15,10 L 10,15 L 5,10 Z" fill="none" stroke="#15122e" strokeWidth="0.5" />
-            </pattern>
-          </defs>
-          <rect width="100" height="100" fill="url(#mughal-pattern)" />
-        </svg>
-      </div>
-
-      {/* Decorative Border - Hidden on very small screens */}
-      <div className="absolute top-0 left-0 right-0 hidden sm:flex justify-center gap-2 sm:gap-4 py-3 sm:py-4">
-        {[...Array(8)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-[#f5c422] opacity-50"></div>
-        ))}
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 sm:gap-10 md:gap-12 items-center">
-
-          {/* Mobile: Heading First */}
-          <div className="md:hidden">
-            <div
-              ref={brochureHeadingRef}
-              className="mb-8 sm:mb-10 opacity-0 transform translate-y-8"
-            >
-              {/* Ornate Header */}
-              <div className="flex items-center gap-2 sm:gap-4 mb-4 sm:mb-6">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-[#f5c422] rotate-45"></div>
-                <div className="flex-1 h-px bg-[#f5c422]"></div>
-                <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-[#f5c422] rotate-45"></div>
-              </div>
-
-              <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none mb-4 sm:mb-6">
-                COMPLETE<br />GUIDE
-              </h2>
-
-              <div className="flex items-center gap-2 sm:gap-3">
-                <svg width="24" height="24" viewBox="0 0 40 40" className="text-[#f5c422] sm:w-[30px] sm:h-[30px]">
-                  <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
-                </svg>
-                <div className="w-16 sm:w-20 h-1 bg-[#f5c422]"></div>
-                <svg width="24" height="24" viewBox="0 0 40 40" className="text-[#f5c422] sm:w-[30px] sm:h-[30px]">
-                  <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
-                </svg>
-              </div>
-            </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+      
+      {/* Mobile: Heading First */}
+      <div className="md:hidden">
+        <div
+          ref={brochureHeadingRef}
+          className="mb-12 opacity-0 transform translate-y-8"
+        >
+          {/* Ornate Header */}
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-8 h-8 border-2 border-[#f5c422] rotate-45"></div>
+            <div className="flex-1 h-px bg-[#f5c422]"></div>
+            <div className="w-8 h-8 border-2 border-[#f5c422] rotate-45"></div>
           </div>
 
-          {/* Left - Ornate Manuscript Frame */}
-          <div
-            ref={brochureLeftRef}
-            className="md:col-span-2 opacity-0 transform translate-y-8"
-          >
-            <div className="relative">
-              {/* Ornate Multi-layer Frame - Adjusted for mobile */}
-              <div className="absolute -inset-4 sm:-inset-6 md:-inset-8 border-2 border-[#f5c422]"></div>
-              <div className="absolute -inset-3 sm:-inset-4 md:-inset-6 border border-[#15122e]"></div>
-              <div className="absolute -inset-2 sm:-inset-3 md:-inset-4 border-2 border-[#f3e8dc]"></div>
+          <h2 className="font-display text-5xl sm:text-6xl font-black text-white leading-none mb-6">
+            COMPLETE<br />GUIDE
+          </h2>
 
-              {/* Corner Decorations - Smaller on mobile */}
-              <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 md:-top-6 md:-left-6 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-t-2 border-l-2 sm:border-t-4 sm:border-l-4 border-[#f5c422]"></div>
-              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 md:-top-6 md:-right-6 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-t-2 border-r-2 sm:border-t-4 sm:border-r-4 border-[#f5c422]"></div>
-              <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 md:-bottom-6 md:-left-6 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-b-2 border-l-2 sm:border-b-4 sm:border-l-4 border-[#f5c422]"></div>
-              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-bottom-6 md:-right-6 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 border-b-2 border-r-2 sm:border-b-4 sm:border-r-4 border-[#f5c422]"></div>
-
-              {/* Manuscript Image */}
-              <div className="relative bg-[#f3e8dc] p-2 sm:p-3 md:p-4">
-                <div className="bg-white p-2 sm:p-3 shadow-2xl">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2Fa3b9abeeff424a8d82fadf2d789e4d7a?format=webp&width=600"
-                    alt="Brochure"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-
-              {/* Ornamental Star Accents */}
-              <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
-                <svg width="24" height="24" viewBox="0 0 30 30" className="text-[#f5c422] sm:w-[30px] sm:h-[30px]">
-                  <path d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z" fill="currentColor" />
-                </svg>
-              </div>
-              <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 transform -translate-x-1/2">
-                <svg width="24" height="24" viewBox="0 0 30 30" className="text-[#15122e] sm:w-[30px] sm:h-[30px]">
-                  <path d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z" fill="currentColor" />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Right - Royal Proclamation Style */}
-          <div className="md:col-span-3">
-            {/* Desktop: Heading */}
-            <div
-              ref={brochureHeadingRef}
-              className="mb-8 md:mb-12 opacity-0 transform translate-y-8 hidden md:block"
-            >
-              {/* Ornate Header */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 border-2 border-[#f5c422] rotate-45"></div>
-                <div className="flex-1 h-px bg-[#f5c422]"></div>
-                <div className="w-12 h-12 border-2 border-[#f5c422] rotate-45"></div>
-              </div>
-
-              <h2 className="font-display text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none mb-6">
-                COMPLETE<br />GUIDE
-              </h2>
-
-              <div className="flex items-center gap-3">
-                <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#f5c422]">
-                  <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
-                </svg>
-                <div className="w-32 h-1 bg-[#f5c422]"></div>
-                <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#f5c422]">
-                  <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
-                </svg>
-              </div>
-            </div>
-
-            <div
-              ref={brochureRightRef}
-              className="opacity-0 transform translate-y-8"
-            >
-              {/* Ornate Content Box */}
-              <div className="relative bg-[#15122e] border-2 sm:border-4 border-[#f5c422] p-5 sm:p-6 md:p-8 lg:p-10 mb-6 sm:mb-8">
-                {/* Corner Ornaments - Smaller on mobile */}
-                <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 w-4 h-4 sm:w-6 sm:h-6 bg-[#f5c422]"></div>
-                <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-4 h-4 sm:w-6 sm:h-6 bg-[#f5c422]"></div>
-                <div className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 w-4 h-4 sm:w-6 sm:h-6 bg-[#f5c422]"></div>
-                <div className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 w-4 h-4 sm:w-6 sm:h-6 bg-[#f5c422]"></div>
-
-                <p className="font-serif text-sm sm:text-base md:text-lg text-[#f3e8dc] leading-relaxed mb-6 sm:mb-8 italic">
-                  Download our comprehensive tournament manuscript featuring complete details about Vakruta's debate format, schedule, rules, and registration information.
-                </p>
-
-                {/* Ornamental List */}
-                <div className="space-y-3 sm:space-y-4">
-                  {[
-                    "Tournament Format & Asian Parliamentary Rules",
-                    "Detailed Schedule & Round Breakdowns",
-                    "Registration Process & Eligibility Criteria",
-                    "Prize Pool & Recognition Categories",
-                    "Adjudication Standards & Judging Process",
-                  ].map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex items-start gap-3 sm:gap-4 group"
-                    >
-                      <div className="flex-shrink-0 mt-1 sm:mt-2">
-                        <div className="w-3 h-3 sm:w-4 sm:h-4 border-2 border-[#f5c422] rotate-45 group-hover:bg-[#f5c422] transition-colors duration-300"></div>
-                      </div>
-                      <span className="font-serif text-xs sm:text-sm text-[#f3e8dc] leading-relaxed">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Ornate Download Button */}
-              <div className="relative group">
-                {/* Decorative Border Animation */}
-                <div className="absolute -inset-1 sm:-inset-2 border-2 border-[#f5c422] group-hover:inset-0 transition-all duration-300"></div>
-
-                <button className="relative w-full bg-[#f5c422] text-[#15122e] font-display text-base sm:text-lg md:text-xl font-black py-4 sm:py-5 md:py-6 px-4 sm:px-6 md:px-8 uppercase tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] group-hover:bg-[#f3e8dc] transition-all duration-300">
-                  <span className="inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
-                      <path d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z" />
-                      <circle cx="17" cy="7" r="2.5" />
-                    </svg>
-                    <span className="text-sm sm:text-base md:text-lg lg:text-xl">Download Brochure</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="sm:w-5 sm:h-5 md:w-6 md:h-6">
-                      <path d="M 12,2 Q 17,2 17,12 Q 17,22 12,22 Q 15,22 15,12 Q 15,2 12,2 Z" />
-                      <circle cx="7" cy="7" r="2.5" />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-            </div>
+          <div className="flex items-center gap-3">
+            <svg width="30" height="30" viewBox="0 0 40 40" className="text-[#f5c422]">
+              <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+            </svg>
+            <div className="w-20 h-1 bg-[#f5c422]"></div>
+            <svg width="30" height="30" viewBox="0 0 40 40" className="text-[#f5c422]">
+              <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+            </svg>
           </div>
         </div>
       </div>
-      
-      {/* Bottom Decorative Border - Hidden on very small screens */}
-      <div className="absolute bottom-0 left-0 right-0 hidden sm:flex justify-center gap-2 sm:gap-4 py-3 sm:py-4">
-        {[...Array(8)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-[#f5c422] opacity-50"></div>
-        ))}
+
+      {/* Left - Ornate Manuscript Frame */}
+      <div
+        ref={brochureLeftRef}
+        className="md:col-span-2 opacity-0 transform translate-y-8"
+      >
+        <div className="relative">
+          {/* Ornate Multi-layer Frame */}
+          <div className="absolute -inset-8 border-2 border-[#f5c422]"></div>
+          <div className="absolute -inset-6 border border-[#15122e]"></div>
+          <div className="absolute -inset-4 border-2 border-[#f3e8dc]"></div>
+
+          {/* Corner Decorations */}
+          <div className="absolute -top-6 -left-6 w-12 h-12 sm:w-16 sm:h-16 border-t-4 border-l-4 border-[#f5c422]"></div>
+          <div className="absolute -top-6 -right-6 w-12 h-12 sm:w-16 sm:h-16 border-t-4 border-r-4 border-[#f5c422]"></div>
+          <div className="absolute -bottom-6 -left-6 w-12 h-12 sm:w-16 sm:h-16 border-b-4 border-l-4 border-[#f5c422]"></div>
+          <div className="absolute -bottom-6 -right-6 w-12 h-12 sm:w-16 sm:h-16 border-b-4 border-r-4 border-[#f5c422]"></div>
+
+          {/* Manuscript Image */}
+          <div className="relative bg-[#f3e8dc] p-4">
+            <div className="bg-white p-3 shadow-2xl">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2Fa3b9abeeff424a8d82fadf2d789e4d7a?format=webp&width=600"
+                alt="Brochure"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Ornamental Star Accents */}
+          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <svg width="30" height="30" viewBox="0 0 30 30" className="text-[#f5c422]">
+              <path d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z" fill="currentColor" />
+            </svg>
+          </div>
+          <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+            <svg width="30" height="30" viewBox="0 0 30 30" className="text-[#15122e]">
+              <path d="M 15,2 L 18,12 L 28,12 L 20,18 L 23,28 L 15,22 L 7,28 L 10,18 L 2,12 L 12,12 Z" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
       </div>
-    </section>
-  );
-}
-    
+
+      {/* Right - Royal Proclamation Style */}
+      <div className="md:col-span-3">
+        {/* Desktop: Heading */}
+        <div
+          ref={brochureHeadingRef}
+          className="mb-12 opacity-0 transform translate-y-8 hidden md:block"
+        >
+          {/* Ornate Header */}
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 border-2 border-[#f5c422] rotate-45"></div>
+            <div className="flex-1 h-px bg-[#f5c422]"></div>
+            <div className="w-12 h-12 border-2 border-[#f5c422] rotate-45"></div>
+          </div>
+
+          <h2 className="font-display text-7xl md:text-8xl font-black text-white leading-none mb-6">
+            COMPLETE<br />GUIDE
+          </h2>
+
+          <div className="flex items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#f5c422]">
+              <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+            </svg>
+            <div className="w-32 h-1 bg-[#f5c422]"></div>
+            <svg width="40" height="40" viewBox="0 0 40 40" className="text-[#f5c422]">
+              <path d="M 20,4 L 24,16 L 36,16 L 26,24 L 30,36 L 20,28 L 10,36 L 14,24 L 4,16 L 16,16 Z" fill="currentColor" />
+            </svg>
+          </div>
+        </div>
+
+        <div
+          ref={brochureRightRef}
+          className="opacity-0 transform translate-y-8"
+        >
+          {/* Ornate Content Box */}
+          <div className="relative bg-[#15122e] border-4 border-[#f5c422] p-6 sm:p-10 mb-8">
+            {/* Corner Ornaments */}
+            <div className="absolute -top-3 -left-3 w-6 h-6 bg-[#f5c422]"></div>
+            <div className="absolute -top-3 -right-3 w-6 h-6 bg-[#f5c422]"></div>
+            <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-[#f5c422]"></div>
+            <div className="absolute -bottom-3 -right-3 w-6 h-6 bg-[#f5c422]"></div>
+
+            <p className="font-cinzel text-base sm:text-lg text-[#f3e8dc] leading-relaxed mb-8 italic">
+              Download our comprehensive tournament manuscript featuring complete details about Vakruta's debate format, schedule, rules, and registration information.
+            </p>
+
+            {/* Ornamental List */}
+            <div className="space-y-4">
+              {[
+                "Tournament Format & Asian Parliamentary Rules",
+                "Detailed Schedule & Round Breakdowns",
+                "Registration Process & Eligibility Criteria",
+                "Prize Pool & Recognition Categories",
+                "Adjudication Standards & Judging Process",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-4 group"
+                >
+                  <div className="flex-shrink-0 mt-2">
+                    <div className="w-4 h-4 border-2 border-[#f5c422] rotate-45 group-hover:bg-[#f5c422] transition-colors duration-300"></div>
+                  </div>
+                  <span className="font-cinzel text-sm text-[#f3e8dc] leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Ornate Download Button */}
+          <div className="relative group">
+            {/* Decorative Border Animation */}
+            <div className="absolute -inset-2 border-2 border-[#f5c422] group-hover:inset-0 transition-all duration-300"></div>
+
+            <button className="relative w-full bg-[#f5c422] text-[#15122e] font-display text-lg sm:text-xl font-black py-5 sm:py-6 px-6 sm:px-8 uppercase tracking-[0.15em] sm:tracking-[0.2em] group-hover:bg-[#f3e8dc] transition-all duration-300">
+              <span className="inline-flex items-center justify-center gap-3 sm:gap-4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="sm:w-6 sm:h-6">
+                  <path d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z" />
+                  <circle cx="17" cy="7" r="2.5" />
+                </svg>
+                Download Brochure
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="sm:w-6 sm:h-6">
+                  <path d="M 12,2 Q 17,2 17,12 Q 17,22 12,22 Q 15,22 15,12 Q 15,2 12,2 Z" />
+                  <circle cx="7" cy="7" r="2.5" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        {/* Bottom Decorative Border */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-4 py-4">
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className="w-2 h-2 rotate-45 bg-[#f5c422] opacity-50"></div>
+          ))}
+        </div>
+      </section>
 
       {/* CTA Section - Royal Decree */}
       <section
