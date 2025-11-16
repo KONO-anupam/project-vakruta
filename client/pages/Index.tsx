@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Navbar from "../components/Navbar";
 
 // Grid Background Component
 const GridBackground = ({
