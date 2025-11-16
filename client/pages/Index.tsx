@@ -102,10 +102,10 @@ export default function Index() {
               innovation, and timeless elegance inspired by the grandeur of the Mughal Empire.
             </p>
             <div className="flex gap-4">
-              <button className="bg-blue-900 hover:bg-blue-800 text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-colors shadow-lg">
+              <button className="bg-[#388697] hover:bg-[#2a6a7e] text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-colors shadow-lg">
                 Explore More
               </button>
-              <button className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-colors">
+              <button className="border-2 border-[#388697] text-[#388697] hover:bg-[#388697] hover:text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-colors">
                 Learn More
               </button>
             </div>
