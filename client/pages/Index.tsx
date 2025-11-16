@@ -368,19 +368,16 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Logo Showcase */}
+            {/* Left - Brochure Image */}
             <div ref={brochureLeftRef} className="flex justify-center opacity-0 transform -translate-x-20 scale-75">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#8EC4D9]/15 to-[#f5c422]/15 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-                <div className="relative bg-[#faf7f4] rounded-3xl p-12 shadow-lg border-2 border-[#f5c422] group-hover:border-[#388697] transition-all duration-500">
+                <div className="relative bg-[#faf7f4] rounded-3xl overflow-hidden shadow-lg border-2 border-[#f5c422] group-hover:border-[#388697] transition-all duration-500">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2F2b1a5895495e4fb98781781147a0dfc0?format=webp&width=600"
-                    alt="Vakruta Logo"
-                    className="w-80 h-80 object-contain mx-auto group-hover:scale-110 transition-transform duration-500"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F7c19d5750a434083a19dfc82c5f593f4%2Fa3b9abeeff424a8d82fadf2d789e4d7a?format=webp&width=600"
+                    alt="Brochure Pattern"
+                    className="w-80 h-80 object-cover mx-auto group-hover:scale-110 transition-transform duration-500"
                   />
-                  <p className="text-center font-cinzel text-[#15122e] font-semibold mt-6">
-                    Vakruta - Symbol of Heritage
-                  </p>
                 </div>
               </div>
             </div>
