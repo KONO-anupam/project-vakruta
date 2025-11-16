@@ -247,7 +247,7 @@ export default function Index() {
                     alt="Vakruta Logo"
                     className="w-80 h-80 object-contain mx-auto"
                   />
-                  <p className="text-center font-cinzel text-blue-900 font-semibold mt-6">
+                  <p className="text-center font-cinzel text-[#15122e] font-semibold mt-6">
                     Vakruta - Symbol of Heritage
                   </p>
                 </div>
@@ -256,11 +256,11 @@ export default function Index() {
 
             {/* Right - Brochure Info */}
             <div className="space-y-6">
-              <div className="bg-blue-50 rounded-2xl p-8 border border-blue-200">
-                <h3 className="font-display text-2xl font-bold text-blue-900 mb-4">
+              <div className="bg-[#e8f3f7] rounded-2xl p-8 border border-[#8EC4D9]">
+                <h3 className="font-display text-2xl font-bold text-[#f5c422] mb-4">
                   What's Inside
                 </h3>
-                <ul className="space-y-4 font-cinzel text-blue-800">
+                <ul className="space-y-4 font-cinzel text-[#15122e]">
                   <li className="flex items-start gap-3">
                     <span className="text-amber-600 font-bold text-xl">✦</span>
                     <span>Complete History and Heritage of Vakruta</span>
