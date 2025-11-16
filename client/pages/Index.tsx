@@ -262,33 +262,33 @@ export default function Index() {
                 </h3>
                 <ul className="space-y-4 font-cinzel text-[#15122e]">
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">✦</span>
+                    <span className="text-[#f5c422] font-bold text-xl">✦</span>
                     <span>Complete History and Heritage of Vakruta</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">✦</span>
+                    <span className="text-[#f5c422] font-bold text-xl">✦</span>
                     <span>Detailed Architectural and Artistic Inspirations</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">✦</span>
+                    <span className="text-[#f5c422] font-bold text-xl">✦</span>
                     <span>Member Benefits and Opportunities</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">✦</span>
+                    <span className="text-[#f5c422] font-bold text-xl">✦</span>
                     <span>Sponsorship and Partnership Programs</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-amber-600 font-bold text-xl">✦</span>
+                    <span className="text-[#f5c422] font-bold text-xl">✦</span>
                     <span>Upcoming Events and Initiatives</span>
                   </li>
                 </ul>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-blue-900 to-blue-800 hover:from-blue-800 hover:to-blue-700 text-white font-display text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105">
+              <button className="w-full bg-gradient-to-r from-[#388697] to-[#2a6a7e] hover:from-[#2a6a7e] hover:to-[#1f4f5f] text-white font-display text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition-all transform hover:scale-105">
                 Download Brochure
               </button>
 
-              <p className="text-center font-cinzel text-sm text-blue-700">
+              <p className="text-center font-cinzel text-sm text-[#388697]">
                 PDF format • 5.2 MB • Available in English & Hindi
               </p>
             </div>
