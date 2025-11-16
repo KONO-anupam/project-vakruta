@@ -211,10 +211,10 @@ export default function Index() {
               innovation, and timeless elegance inspired by the grandeur of the Mughal Empire.
             </p>
             <div className="flex gap-4">
-              <button className="bg-[#388697] hover:bg-[#2a6a7e] text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+              <button className="bg-[#15122e] hover:bg-[#0f0c1e] text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                 Explore More
               </button>
-              <button className="border-2 border-[#388697] text-[#388697] hover:bg-[#388697] hover:text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
+              <button className="border-2 border-[#15122e] text-[#15122e] hover:bg-[#15122e] hover:text-white font-cinzel font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105">
                 Learn More
               </button>
             </div>
@@ -409,7 +409,7 @@ export default function Index() {
                 </ul>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-[#388697] to-[#2a6a7e] hover:from-[#2a6a7e] hover:to-[#1f4f5f] text-white font-display text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+              <button className="w-full bg-gradient-to-r from-[#15122e] to-[#0f0c1e] hover:from-[#0f0c1e] hover:to-[#08070f] text-white font-display text-lg font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
                 Download Brochure
               </button>
 
@@ -453,7 +453,7 @@ export default function Index() {
             the magnificent heritage of Indian civilization. Together, we honor the legacy
             of Mughal artistry and timeless cultural traditions.
           </p>
-          <button className="bg-gradient-to-r from-[#f5c422] to-[#d4a913] hover:from-[#d4a913] hover:to-[#b39409] text-[#15122e] font-display font-bold text-lg px-12 py-4 rounded-xl shadow-xl transition-all duration-300 transform hover:scale-110 hover:shadow-2xl">
+          <button className="bg-gradient-to-r from-[#15122e] to-[#0f0c1e] hover:from-[#0f0c1e] hover:to-[#08070f] text-white font-display font-bold text-lg px-12 py-4 rounded-xl shadow-xl transition-all duration-300 transform hover:scale-110 hover:shadow-2xl">
             Get Involved Today
           </button>
         </div>
