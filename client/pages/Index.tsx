@@ -11,17 +11,18 @@ const GridBackground = ({ children, className = "" }: { children?: React.ReactNo
   return (
     <div className={`relative ${className}`}>
       <div
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-20"
         style={{
-          backgroundSize: '40px 40px',
-          backgroundImage: 'linear-gradient(to right, #15122e 1px, transparent 1px), linear-gradient(to bottom, #15122e 1px, transparent 1px)'
+          backgroundSize: '50px 50px',
+          backgroundImage: 'linear-gradient(to right, rgba(56, 134, 151, 0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(56, 134, 151, 0.15) 1px, transparent 1px)'
         }}
       />
-      <div className="pointer-events-none absolute inset-0 bg-[#f3e8dc] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent)]"></div>
       {children}
     </div>
   );
 };
+
 
 export default function Index() {
   const heroHeadingRef = useRef<HTMLHeadingElement>(null);
