@@ -18,13 +18,7 @@ const IslamicPattern = ({
       <div className="absolute inset-0 opacity-5">
         <svg className="w-full h-full">
           <defs>
-            <pattern id="islamic-circles" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-              <circle cx="40" cy="40" r="30" fill="none" stroke="#388697" strokeWidth="1.5" />
-              <circle cx="40" cy="40" r="20" fill="none" stroke="#f5c422" strokeWidth="1" />
-              <circle cx="40" cy="40" r="10" fill="none" stroke="#388697" strokeWidth="0.5" />
-              <path d="M 40,10 L 45,30 L 65,30 L 50,42 L 55,62 L 40,50 L 25,62 L 30,42 L 15,30 L 35,30 Z"
-                fill="none" stroke="#f5c422" strokeWidth="0.8" opacity="0.6" />
-            </pattern>
+           
           </defs>
           <rect width="100%" height="100%" fill="url(#islamic-circles)" />
         </svg>
