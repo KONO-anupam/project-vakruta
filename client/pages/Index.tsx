@@ -1500,37 +1500,50 @@ export default function Index() {
 
                 {/* Ornate Download Button */}
                 <div className="relative group">
-                  {/* Decorative Border Animation */}
-                  <div className="absolute -inset-1 sm:-inset-2 border-2 border-[#f5c422] group-hover:inset-0 transition-all duration-300"></div>
+  {/* Decorative Border Animation */}
+  <div className="absolute -inset-1 sm:-inset-2 border-2 border-[#f5c422] group-hover:inset-0 transition-all duration-300"></div>
 
-                  <button className="relative w-full bg-[#f5c422] text-[#15122e] font-display text-xl sm:text-2xl md:text-2xl font-black py-4 sm:py-5 md:py-6 px-4 sm:px-6 md:px-8 uppercase tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] group-hover:bg-[#f3e8dc] transition-all duration-300">
-                    <span className="inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="sm:w-6 sm:h-6 md:w-7 md:h-7"
-                      >
-                        <path d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z" />
-                        <circle cx="17" cy="7" r="2.5" />
-                      </svg>
-                      <span className="text-xl sm:text-xl md:text-2xl lg:text-2xl">
-                        Download Brochure
-                      </span>
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        className="sm:w-6 sm:h-6 md:w-7 md:h-7"
-                      >
-                        <path d="M 12,2 Q 17,2 17,12 Q 17,22 12,22 Q 15,22 15,12 Q 15,2 12,2 Z" />
-                        <circle cx="7" cy="7" r="2.5" />
-                      </svg>
-                    </span>
-                  </button>
-                </div>
+  <a
+    href="/Vakruta-8.0-Brochure.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative block"
+  >
+    <button
+      type="button"
+      className="relative w-full bg-[#f5c422] text-[#15122e] font-display text-xl sm:text-2xl md:text-2xl font-black py-4 sm:py-5 md:py-6 px-4 sm:px-6 md:px-8 uppercase tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] group-hover:bg-[#f3e8dc] transition-all duration-300"
+    >
+      <span className="inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+        >
+          <path d="M 12,2 Q 7,2 7,12 Q 7,22 12,22 Q 9,22 9,12 Q 9,2 12,2 Z" />
+          <circle cx="17" cy="7" r="2.5" />
+        </svg>
+
+        <span className="text-xl sm:text-xl md:text-2xl lg:text-2xl">
+          Download Brochure
+        </span>
+
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="sm:w-6 sm:h-6 md:w-7 md:h-7"
+        >
+          <path d="M 12,2 Q 17,2 17,12 Q 17,22 12,22 Q 15,22 15,12 Q 15,2 12,2 Z" />
+          <circle cx="7" cy="7" r="2.5" />
+        </svg>
+      </span>
+    </button>
+  </a>
+</div>
+
               </div>
             </div>
           </div>

@@ -56,13 +56,19 @@ export default function Navbar() {
 
           {/* Desktop CTA - Subtle animation like Sponsor Us */}
           <div className="hidden lg:block">
-            <button className="relative group">
-              <div className="absolute inset-0 bg-[#f5c422] transform group-hover:scale-105 transition-transform duration-300"></div>
-              <div className="relative bg-[#15122e] m-1 px-6 py-3 font-display font-black text-[15px] text-[#f5c422] uppercase tracking-wider group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300 border-2 border-transparent text-md">
-                Register →
-              </div>
-            </button>
-          </div>
+  <a
+    href="https://linktr.ee/vakruta_pd"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative group inline-block"
+  >
+    <div className="absolute inset-0 bg-[#f5c422] transform group-hover:scale-105 transition-transform duration-300"></div>
+    <div className="relative bg-[#15122e] m-1 px-6 py-3 font-display font-black text-[15px] text-[#f5c422] uppercase tracking-wider group-hover:bg-[#f5c422] group-hover:text-[#15122e] transition-colors duration-300 border-2 border-transparent text-md">
+      Register →
+    </div>
+  </a>
+</div>
+
 
           {/* Mobile Hamburger */}
           <button
